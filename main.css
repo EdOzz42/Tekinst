@@ -118,7 +118,7 @@ header .nav .links .c-links:hover .submenu {
 }
 
 main {
-    width: 90%;
+    width: 80%;
     margin: auto;
     margin-top: -4rem;
 }
@@ -130,11 +130,17 @@ hr.rounded {
 
 main section.content {
   background-color: var(--white-background-variation);
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 2.5rem 1rem 2.5rem;
 }
 
 main section.content.about-us {
+  text-align: center;
   border-radius: 1rem 1rem 0rem 0rem;
+}
+
+main section.content.about-us .image-cep{
+ border-radius: .5rem;
+ width: 100%;
 }
 
 main section.content h2{
@@ -142,14 +148,11 @@ main section.content h2{
 }
 
 main div.students {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 main section.content div.students .student {
-  display: flex;
-  flex-direction: column;
-  width: 28%;
   margin: 1rem;
   padding: 1rem;
   border-radius: .5rem;
@@ -167,7 +170,8 @@ main section.content div.students .student:hover::after {
   content: ' ';
   background-image: linear-gradient(45deg, var(--transparent), var(--white-background));
   border-radius: .5rem;
-  opacity: .4;
+  mix-blend-mode: screen;
+  opacity: .7;
   position: absolute;
   display: block;
   top: 0;
@@ -181,12 +185,20 @@ main section.content div.students img {
   width: 100%
 }
 
-main section.content.about-us {
-  text-align: center;
+main section.content div.students .student.oliveira:hover {
+ background-color: rgb(80, 223, 236);
 }
-
-main section.content.about-us img{
-  border-radius: .5rem;
+main section.content div.students .student.antonio:hover {
+ background-color: rgb(182, 95, 237);
+}
+main section.content div.students .student.giorgio:hover {
+ background-color: rgb(80, 122, 236);
+}
+main section.content div.students .student.arthur:hover {
+ background-color: rgb(142, 209, 94);
+}
+main section.content div.students .student.carlos:hover {
+ background-color: rgb(238, 85, 62);
 }
 
 footer {
