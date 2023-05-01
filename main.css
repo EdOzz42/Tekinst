@@ -189,7 +189,8 @@ main section.content div.students .student.oliveira:hover {
  background-color: rgb(108, 203, 225);
 }
 main section.content div.students .student.antonio:hover {
- background-color: rgb(189, 108, 240);
+ background-color: rgb(82, 0, 133);
+ color: var(--white);
 }
 main section.content div.students .student.giorgio:hover {
  background-color: rgb(255, 92, 92);
