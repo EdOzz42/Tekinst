@@ -186,19 +186,20 @@ main section.content div.students img {
 }
 
 main section.content div.students .student.oliveira:hover {
- background-color: rgb(80, 223, 236);
+ background-color: rgb(108, 203, 225);
 }
 main section.content div.students .student.antonio:hover {
- background-color: rgb(182, 95, 237);
+ background-color: rgb(189, 108, 240);
 }
 main section.content div.students .student.giorgio:hover {
- background-color: rgb(80, 122, 236);
+ background-color: rgb(255, 92, 92);
 }
 main section.content div.students .student.arthur:hover {
  background-color: rgb(142, 209, 94);
 }
 main section.content div.students .student.carlos:hover {
- background-color: rgb(238, 85, 62);
+  color: var(--white);
+  background-color: rgb(30, 30, 30);
 }
 
 footer {
