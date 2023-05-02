@@ -10,10 +10,6 @@
   --transparent: rgba(0, 0, 0, 0);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Kanit", sans-serif;
   background-color: var(--white-background);
@@ -118,7 +114,7 @@ header .nav .links .c-links:hover .submenu {
 }
 
 main {
-    width: 80%;
+    width:75%;
     margin: auto;
     margin-top: -4rem;
 }
@@ -133,6 +129,15 @@ main section.content {
   padding: 1rem 2.5rem 1rem 2.5rem;
 }
 
+main section.content h2{
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+main section.content p{
+  font-size: 1.15rem;
+}
+
 main section.content.about-us {
   text-align: center;
   border-radius: 1rem 1rem 0rem 0rem;
@@ -140,11 +145,7 @@ main section.content.about-us {
 
 main section.content.about-us .image-cep{
  border-radius: .5rem;
- width: 100%;
-}
-
-main section.content h2{
-  text-align: center;
+ width: 95%;
 }
 
 main div.students {
@@ -153,16 +154,21 @@ main div.students {
 }
 
 main section.content div.students .student {
-  margin: 1rem;
-  padding: 1rem;
+  margin: 1.15rem;
+  padding: 1rem .75rem 1rem .75rem;
+  text-align: center;
   border-radius: .5rem;
   background-color: var(--bright-yellow);
   transition: .25s;
 }
 
+main section.content div.students .student p{
+  padding: .5rem;
+  text-align: start;
+}
+
 main section.content div.students .student:hover {
   scale: 1.1;
-  margin: 1.25rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -182,7 +188,7 @@ main section.content div.students .student:hover::after {
 
 main section.content div.students img {
   border-radius: .5rem;
-  width: 100%
+  width: 95%
 }
 
 main section.content div.students .student.oliveira:hover {
@@ -204,9 +210,28 @@ main section.content div.students .student.carlos:hover {
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   background-image: linear-gradient(45deg, var(--bright-yellow), var(--blue-gray));
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   padding: .25rem;
 }
 
+footer .cep a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  transition: .25s;
+}
+
+footer .cep img {
+  width: 5rem;
+  padding: .5rem;
+}
+
+footer .cep a:hover {
+  scale: 1.04;
+}
