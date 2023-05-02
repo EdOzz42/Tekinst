@@ -3,7 +3,7 @@
 :root {
   --bright-yellow: #fbd53f;
   --dark-blue: #333652;
-  --blue-gray: #90adc6;
+  --blue-gray: #768898;
   --white: #f0f0f0;
   --white-background: #e4e4e4;
   --white-background-variation: #d4d4d4;
@@ -81,8 +81,8 @@ header .nav .links .link {
 
 header .nav .links .submenu {
   display: none;
-  margin-top: 2.5rem;
   position: absolute;
+  margin-top: 2.5rem;
 }
 
 header .nav .links .submenu li a{
@@ -107,7 +107,7 @@ header .nav .links .submenu li:last-child {
 }
 
 header .nav .links .submenu li:hover {
-  scale: 1.1;
+  scale: 1.08;
   background-color: var(--bright-yellow);
 }
 
@@ -136,6 +136,10 @@ main section.content h2{
   font-size: 1.75rem;
 }
 
+main section.content h3 {
+  font-size: 1.5rem;
+}
+
 main section.content p{
   font-size: 1.15rem;
 }
@@ -157,7 +161,7 @@ main div.students {
 
 main section.content div.students .student {
   margin: 1.15rem;
-  padding: 1rem .75rem 1rem .75rem;
+  padding: 1.5rem .75rem 1.5rem .75rem;
   text-align: center;
   border-radius: .5rem;
   background-color: var(--bright-yellow);
@@ -190,7 +194,7 @@ main section.content div.students .student:hover::after {
 
 main section.content div.students img {
   border-radius: .5rem;
-  width: 95%
+  width: 90%
 }
 
 main section.content div.students .student.oliveira:hover {
@@ -209,6 +213,46 @@ main section.content div.students .student.arthur:hover {
 main section.content div.students .student.carlos:hover {
   color: var(--white);
   background-color: rgb(30, 30, 30);
+}
+
+main section.content.projects .project {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 2.5rem auto 2.5rem auto;
+  width: 75%;
+  height: 15rem;
+}
+
+main section.content.projects .project .description a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main section.content.projects .project .description {
+  padding: 1rem;
+  transition: .25s;
+  border-radius: 0 .5rem .5rem 0;
+}
+
+main section.content.projects .project .project-image{
+  background-color: var(--dark-blue);
+  width: 415px;
+  height: 230px;
+  padding: .75rem;
+  border-radius: .5rem 0 0 .5rem;   
+}
+
+main section.content.projects .project .project-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+main section.content.projects .project:hover .description {
+  background-color: var(--dark-blue);
+  color: var(--bright-yellow);
+  cursor: pointer;
 }
 
 footer {
