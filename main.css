@@ -314,40 +314,41 @@ footer .cep a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
-    width: 85%;
+    width: 90%;
   }
   
   main section.content.projects .project .description {
     border-radius: 0 0 0.5rem 0.5rem;
+    margin: 0 auto 0.5rem auto;
+    width: 80%;
   }
 
   main section.content.projects .project .project-image {
     border-radius: 0.5rem 0.5rem 0 0;
-    height: 10%;
+    margin: 0.5rem auto 0 auto;
+    width: 80%;
   }
 
   main section.content.projects .project {
     display: flex;
     flex-direction: column;
-    margin: 0.5rem auto 0.5rem auto;
-    width: 75%;
+    width: 100%;
   }
 }
 
-@media only screen and (max-width: 900px) {
-  main div.students {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 90%;
-  }
-
+@media only screen and (max-width: 1000px) {
   main section.content.projects .project {
     width: 85%;
   }
+
+  main section.content.projects .project .description, 
+  main section.content.projects .project:hover .description{
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) {
   header {
     flex-direction: column;
     align-items: baseline;
@@ -394,6 +395,12 @@ footer .cep a:hover {
   main section.content.about-us .image-cep {
     margin: 1rem 0;
     width: 95%;
+  }
+
+  main div.students {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
   }
 
   footer {
