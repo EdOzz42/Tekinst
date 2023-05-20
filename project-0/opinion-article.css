@@ -1,43 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap");
 
 :root {
-  --bright-yellow: #fbd53f;
-  --dark-blue: #333652;
-  --blue-gray: #768898;
+  --neon-green: #60ce56;
+  --bright-pink: #e24aff;
+  --black: #1f1f1f;
+  --blue-gray: #6d7f8e;
   --white: #f0f0f0;
-  --gray: #929191;
-  --pastel-yellow: #c0b992;
-  --white-background: #d4d4d4;
+  --gray: #656565;
+  --white-background-variation: #d4d4d4;
   --transparent: rgba(0, 0, 0, 0);
 }
 
 body {
   font-family: "Kanit", sans-serif;
-  background-image: linear-gradient(var(--gray), var(--pastel-yellow))
+  background-color: var(--gray);
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2rem 6rem 2rem;
-  background-color: var(--dark-blue);
-  color: var(--bright-yellow);
+  padding: 4rem 2rem 8rem 2rem;
+  background-color: var(--black);
+  color: var(--bright-pink);
 }
 
-header .logo-title {
-  display: flex;
+header .titles {
   align-items: center;
 }
 
-header .logo-title h1 {
-  font-size: 4rem;
+header .titles h1 {
+  font-size: 3.5rem;
+  margin: 0;
 }
 
-header .logo-title img {
-  width: 10rem;
-  margin: 1rem;
+header .titles h2 {
+  font-size: 1.75rem;
+  margin: 0;
 }
+
 
 div.nav {
   display: flex;
@@ -45,8 +46,8 @@ div.nav {
 }
 
 header .nav .material-symbols-rounded {
-  background-color: var(--bright-yellow);
-  color: var(--dark-blue);
+  background-color: var(--neon-green);
+  color: var(--black);
   font-size: 1.5rem;
   transition: .25s;
   padding: .5rem;
@@ -71,19 +72,19 @@ header .nav .links .c-links{
 
 header .nav .links .c-links:hover{
   font-size: 1.5rem;
-  border-bottom: .25rem solid var(--bright-yellow);
-  border-left: .25rem solid var(--bright-yellow);
+  border-bottom: .25rem solid var(--neon-green);
+  border-left: .25rem solid var(--neon-green);
 }
 
 header .nav .links .link {
   text-decoration: none;
-  color: var(--bright-yellow);
+  color: var(--neon-green);
 }
 
 header .nav .links .submenu {
   display: none;
+  margin-top: 2.9rem;
   position: absolute;
-  margin-top: 2.5rem;
 }
 
 header .nav .links .submenu li a{
@@ -109,7 +110,7 @@ header .nav .links .submenu li:last-child {
 
 header .nav .links .submenu li:hover {
   scale: 1.08;
-  background-color: var(--bright-yellow);
+  background-color: var(--bright-pink);
 }
 
 header .nav .links .c-links:hover .submenu {
@@ -123,16 +124,16 @@ main {
 }
 
 hr.rounded {
-  border-top: .5rem solid var(--dark-blue);
+  border-top: .5rem solid var(--black);
   margin: 0;
 }
 
 main section.content {
-  background-color: var(--white-background);
-  padding: 1rem 2.5rem 1rem 2.5rem;
+  background-color: var(--white-background-variation);
+  padding: 1.5rem 2.25rem 1.5rem 2.25rem;
 }
 
-main section.content h2{
+main section.content h2 {
   text-align: center;
   font-size: 1.75rem;
 }
@@ -141,94 +142,33 @@ main section.content h3 {
   font-size: 1.5rem;
 }
 
-main section.content p{
+main section.content p {
   font-size: 1.15rem;
 }
 
-main section.content.about-us p {
+main section.content.about-ais {
+  text-align: center;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+
+main section.content.about-ais .chatgpt-image {
+ border-radius: .5rem;
+ margin: 1.5rem 0;
+ width: 75%;
+}
+
+main section.content .text p {
   text-indent: 3ch;
   margin: 0 auto .5rem auto;
   text-align: start;
   width: 85%;
 }
 
-main section.content.about-us {
-  text-align: center;
-  border-radius: 1rem 1rem 0rem 0rem;
-}
-
-main section.content.about-us .image-cep{
- border-radius: .5rem;
- margin: 1rem;
- width: 85%;
-}
-
-main div.students {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-main section.content div.students .student {
-  margin: 1.15rem;
-  padding: 1.5rem .75rem 1.5rem .75rem;
-  text-align: center;
-  border-radius: .5rem;
-  background-color: var(--bright-yellow);
-  transition: .25s;
-}
-
-main section.content div.students .student p{
-  padding: .5rem;
-  text-align: start;
-}
-
-main section.content div.students .student:hover {
-  scale: 1.1;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-main section.content div.students .student:hover::after {
-  content: ' ';
-  background-image: linear-gradient(45deg, var(--transparent), var(--white-background));
-  border-radius: .5rem;
-  mix-blend-mode: screen;
-  opacity: .7;
-  position: absolute;
-  display: block;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
-main section.content div.students img {
-  border-radius: .5rem;
-  width: 90%
-}
-
-main section.content div.students .student.oliveira:hover {
- background-color: rgb(108, 203, 225);
-}
-main section.content div.students .student.antonio:hover {
- background-color: rgb(82, 0, 133);
- color: var(--white);
-}
-main section.content div.students .student.giorgio:hover {
- background-color: rgb(255, 92, 92);
-}
-main section.content div.students .student.arthur:hover {
- background-color: rgb(142, 209, 94);
-}
-main section.content div.students .student.carlos:hover {
-  color: var(--white);
-  background-color: rgb(30, 30, 30);
-}
-
 main section.content.projects .project {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 2.5rem auto 2.5rem auto;
-  width: 85%;
+  width: 75%;
 }
 
 main section.content.projects .project .description a {
@@ -241,14 +181,14 @@ main section.content.projects .project .description p{
 }
 
 main section.content.projects .project .description {
-  padding: 1.5rem;
+  padding: 1rem;
   transition: .25s;
   border-radius: 0 .5rem .5rem 0;
 }
 
 main section.content.projects .project .project-image{
-  background-color: var(--dark-blue);
-  padding: 1.5rem;
+  background-color: var(--black);
+  padding: .75rem;
   border-radius: .5rem 0 0 .5rem;   
 }
 
@@ -257,24 +197,20 @@ main section.content.projects .project .project-image img{
   height: 100%;
   object-fit: cover;
   border-radius: .5rem;
-  transition: .25s;
-}
-
-main section.content.projects .project:hover img {
-  scale: 1.05;
 }
 
 main section.content.projects .project:hover .description {
-  background-color: var(--dark-blue);
-  color: var(--bright-yellow);
+  background-color: var(--black);
+  color: var(--bright-pink);
   cursor: pointer;
 }
+
 
 footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-image: linear-gradient(45deg, var(--bright-yellow), var(--blue-gray));
+  background-image: linear-gradient(45deg, var(--bright-pink), var(--neon-green));
   text-align: center;
   font-size: 1.4rem;
   padding: .25rem;
@@ -297,21 +233,20 @@ footer .cep a:hover {
   scale: 1.04;
 }
 
-@media only screen and (max-width: 650px)  {
+@media only screen and (max-width: 600px)  {
   header  {
     flex-direction: column;
     align-items: baseline;
   }
 
-  header .logo-title h1 {
-    font-size: 3rem;
-  }
-
-  header .logo-title img {
-    width: 5rem;
-    margin: .5rem .5rem .5rem -.5rem ;
+  header .titles h1 {
+    font-size: 2.5rem;
   }
   
+  header .titles h2 {
+    font-size: 1.25rem;
+  }
+
   header .nav .material-symbols-rounded {
     margin: 1rem 0;
   }
@@ -341,21 +276,11 @@ footer .cep a:hover {
     font-size: 1rem;
   }
 
-  main section.content.about-us .image-cep {
+  main section.content.about-ais .chatgpt-image {
     margin: 1rem 0;
-    width: 95%;
+    width: 85%;
    }
 
-  footer {
-    font-size: 1.2rem;
-  }
-
-  footer .cep img{
-    width: 3rem;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
   main section.content.projects .project .description {
     border-radius: 0 0 .5rem .5rem;
   }
@@ -370,15 +295,12 @@ footer .cep a:hover {
     margin: .5rem auto .5rem auto;
     width: 75%;
   }
-  
-  main div.students {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 90%;
+
+  footer {
+    font-size: 1.2rem;
   }
 
-  main section.content div.students img{
-    width: 85%;
+  footer .cep img{
+    width: 3rem;
   }
 }
