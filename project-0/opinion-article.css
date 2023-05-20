@@ -118,7 +118,7 @@ header .nav .links .c-links:hover .submenu {
 }
 
 main {
-    width:75%;
+    width: 75%;
     margin: auto;
     margin-top: -4rem;
 }
@@ -155,6 +155,16 @@ main section.content.about-ais .chatgpt-image {
  border-radius: .5rem;
  margin: 1.5rem 0;
  width: 75%;
+}
+
+main section.opinion-article {
+  text-align: center;
+}
+
+main section.opinion-article img {
+  border-radius: .5rem;
+  margin: 1.5rem;
+  width: 75%;
 }
 
 main section.content .text p {
@@ -265,7 +275,7 @@ footer .cep a:hover {
 
   main section.content {
     background-color: var(--white-background-variation);
-    padding: .75rem;
+    padding: .5rem;
   }
 
   main section.content h2 {
@@ -273,14 +283,14 @@ footer .cep a:hover {
   }
 
   main section.content p {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 
-  main section.content.about-ais .chatgpt-image {
+  main section.content.about-ais .chatgpt-image, main section.opinion-article img {
     margin: 1rem 0;
     width: 85%;
    }
-
+   
   main section.content.projects .project .description {
     border-radius: 0 0 .5rem .5rem;
   }
