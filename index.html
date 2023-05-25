@@ -141,15 +141,29 @@
     </main>
 
     <footer>
-      <div class="tekinst">
-        <p>@Tekinst</p>
+      <div class="info">
+        <div class="tekinst">
+          <p>@Tekinst</p>
+        </div>
+        <div class="cep">
+          <a href="https://www.cep.pr.gov.br/" target="_blank">
+            <img src="./images/others/cep-logo.png" alt="Logo do Colégio Estadual do Paraná">
+            <p>Colégio Estadual do Paraná</p>
+          </a>
+        </div>
       </div>
-      <div class="cep">
-        <a href="https://www.cep.pr.gov.br/" target="_blank">
-          <img src="./images/others/cep-logo.png" alt="Logo do Colégio Estadual do Paraná">
-          <p>Colégio Estadual do Paraná</p>
-        </a>  
-      </div>
+
+      <form action="https://formspree.io/f/xqkoodqn" method="POST" target="_blank" class="message-form">
+        <label>
+          Seu email:
+          <input type="email" name="email">
+        </label>
+        <label>
+          Sua mensagem: <br>
+          <textarea name="message"></textarea>
+        </label>
+        <button type="submit">Enviar</button>
+      </form>
     </footer>
 
     <script src="script.js"></script>

@@ -283,9 +283,17 @@ footer {
     var(--bright-yellow),
     var(--blue-gray)
   );
-  text-align: center;
   font-size: 1.4rem;
   padding: 0.25rem;
+}
+
+footer .info {
+  display: flex;
+  align-items: center;
+}
+
+footer .cep {
+  margin-left: 2rem;
 }
 
 footer .cep a {
@@ -303,6 +311,48 @@ footer .cep img {
 
 footer .cep a:hover {
   scale: 1.04;
+}
+
+.message-form {
+  background-color: var(--white-background);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: .5rem;
+  text-align: left;
+  display: flex;
+  flex-flow: column wrap;
+
+}
+
+.message-form label {
+  margin-bottom: 1rem;
+}
+
+.message-form label input {
+  border-radius: .5rem;
+  font-size: 1.25rem;
+  border: 0
+}
+
+.message-form label textarea {
+  border-radius: .5rem;
+  font-size: 1.25rem;
+  height: 10rem;
+  border: 0
+}
+
+.message-form button {
+  border-radius: .5rem;
+  padding: 1rem;
+  border: 0;
+  background-color:  var(--white);
+  transition: .25s;
+}
+
+.message-form button:hover {
+  background-color:  var(--dark-blue);
+  color: #fbd53f;
+  scale: 1.05;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -404,10 +454,17 @@ footer .cep a:hover {
   }
 
   footer {
+    display: inline-block;
+    width: 100%;
+    text-align: center;    
     font-size: 1.2rem;
   }
 
+  footer .info {
+    margin-left: 1rem;
+  }
+
   footer .cep img {
-    width: 3rem;
+    width: 2.5rem;
   }
 }
