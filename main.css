@@ -2,7 +2,7 @@
 
 :root {
   --bright-yellow: #fbd53f;
-  --dark-blue: #333652;
+  --dark-blue: #223b5d;
   --blue-gray: #768898;
   --white: #f0f0f0;
   --gray: #929191;
@@ -242,6 +242,7 @@ main section.content.projects .project .description a {
 
 main section.content.projects .project .description p {
   font-size: 1.25rem;
+  cursor: pointer;
 }
 
 main section.content.projects .project .description {
@@ -261,17 +262,16 @@ main section.content.projects .project .project-image img {
   height: 100%;
   object-fit: cover;
   border-radius: 0.5rem;
-  transition: 0.25s;
+  transition: .2s;
 }
 
 main section.content.projects .project:hover img {
-  scale: 1.05;
+  scale: 1.04;
 }
 
 main section.content.projects .project:hover .description {
   background-color: var(--dark-blue);
   color: var(--bright-yellow);
-  cursor: pointer;
 }
 
 footer {

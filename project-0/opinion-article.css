@@ -215,7 +215,6 @@ main section.content.projects .project:hover .description {
   cursor: pointer;
 }
 
-
 footer {
   display: flex;
   justify-content: space-around;
