@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/others/tekinst-favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="../reset.css" />
-    <link rel="stylesheet" href="./circuit-led.css" />
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="./circuit-led.css">
     <title>Circuito Botão e LED - Montagem comentada</title>
   </head>
   <body>
@@ -28,15 +28,15 @@
                   <li><a href="#project-2">Projeto 2</a></li>
               </ul>
             </li>
-                <li class="c-links"><a class="link" href="#about-us">Sobre o Projeto</a></li>
-                <li class="c-links"><a class="link" href="#team">As Partes</a></li>
-                <li class="c-links"><a class="link" href="#construction">A montagem</a></li>
-            </ul>               
+            <li class="c-links"><a class="link" href="#about-us">Sobre o Projeto</a></li>
+            <li class="c-links"><a class="link" href="#team">Componentes</a></li>
+            <li class="c-links"><a class="link" href="#construction">Montagem</a></li>
+          </ul>               
         </div>
     </header>
     <main>
         <section class="content about-us" id="about-us">
-            <h2>Sobre o Projeto</h2>
+            <h2>Sobre o projeto</h2>
                 <img class="image-cep" src="./images/work-images/led-demo-2.gif" alt="Colégio Estadual do Paraná">         
               <p>
                 Este projeto escolar, intitulado "Circuito Botão-LED", foi desenvolvido pelos alunos Oliveira, Arthur Zuliani, Eduardo Antonio, Giorgio e Carlos Eduardo como parte da disciplina de Robótica. O objetivo do projeto era aprender sobre eletrônica básica, desenvolver habilidades de montagem de circuitos e criar um sistema simples que envolvesse a interação entre o precionar de um botão e um LED.
@@ -47,7 +47,7 @@
         <hr class="rounded">
 
         <section class="content" id="team">
-          <h2>Partes do Circuito</h2>
+          <h2>Componentes que vamos usar</h2>
          
           <div class="parts">  
            <div class="part">
@@ -122,6 +122,80 @@
 
         <section class="content mounting">
           <h2>Montagem por passos</h2>
+
+          <div class="part">
+            <h3>1. Organizar o material que será usado</h3>
+            <img src="./images/work-images/creation_tinkercad/circuit-creation-0.JPG" alt="imagem">
+          </div>
+          
+          <div class="part">
+            <h3>
+              2. Conectar a perna do botão na posição e7 e a outra na posição e9 do breadboard
+            </h3>
+            <img src="./images/work-images/creation_tinkercad/circuit-creation-1.JPG" alt="imagem">
+          </div>
+          
+          <div class="part">
+            <h3>
+              3. Conectar um resistor de 150 ohms na posição 2j a linha horizontal negativa e outro de 10k ohms na posição 7b a linha horizontal negativa
+            </h3>
+            <img src="./images/work-images/creation_tinkercad/circuit-creation-2.JPG" alt="imagem">
+          </div>
+          
+          <div class="part">
+            <h3>
+              4. Conectar ânodo do LED verde na cordenada g2 do breadboard
+            </h3>
+            <img src="./images/work-images/creation_tinkercad/circuit-creation-3.JPG" alt="imagem">
+          </div>
+          
+          <div class="part">
+            <h3>
+              5. Conectar cabo jumper no ground (GND), está a esquerda da porta 13, do Arduino na linha horizontal negativa superior
+            </h3>
+            <img src="./images/work-images/creation_tinkercad/circuit-creation-4.JPG" alt="imagem">
+          </div>
+          
+          <div class="part">
+            <h3>
+              6. Conectar cabo jumper na porta 13 do Arduino na cordenada i2, logo abaixo do resistor
+            </h3>
+            <img src="./images/work-images/creation_tinkercad/circuit-creation-5.JPG" alt="imagem">
+          </div>
+          
+          <div class="part">
+            <h3>7.
+              Conectar cabo jumper na porta 12 do Arduino na cordenada d7, logo abaixo da perninha inferior esquerda do pushbutton
+            </h3>
+            <img src="./images/work-images/creation_tinkercad/circuit-creation-6.JPG" alt="imagem">
+          </div>
+          
+          <div class="part">
+            <h3>
+              8. Conectar cabo jumper na linha horizontal positiva inferior a cordenada a9
+            </h3>
+            <img src="./images/work-images/creation_tinkercad/circuit-creation-7.JPG" alt="imagem">
+          </div>
+          
+          <div class="part">
+            <h3>
+              9. Conectar cabo jumper no ground (GND), está a esquerda de Vin, do Arduino na linha horizontal negativa superior
+            </h3>
+            <img src="./images/work-images/creation_tinkercad/circuit-creation-8.JPG" alt="imagem">
+          </div>
+          
+          <div class="part">
+            <h3>
+              10. Conectar cabo jumper na porta 5V do Arduino na linha horizontal positiva inferior
+            </h3>
+            <img src="./images/work-images/creation_tinkercad/circuit-creation-9.JPG" alt="imagem">
+          </div>
+          
+          <div class="part">
+            <h3>Resultado final do circuito</h3>
+            <img src="./images/work-images/creation_tinkercad/circuit-demo.JPG" alt="imagem">
+          </div>
+          
         </section>
 
         <hr class="rounded">
@@ -143,7 +217,7 @@
             
             <article class="project" id="project-2">
               <div class="project-image">
-                <img src="./images/project-images/test.jpeg" alt="Test Image">
+                <img src="/images/project-images/test.jpeg" alt="Test Image">
               </div>
               <div class="description">
                 <a href="https://pranx.com/windows-xp-simulator/" target="_blank">

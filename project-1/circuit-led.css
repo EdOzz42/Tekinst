@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap");
 
 :root {
-  --cyan: #2edada;
-  --dark-blue: #223846;
-  --dark-cyan: #256067;
+  --cyan: #25d3d3;
+  --light-cyan: #9cebeb;
+  --dark-blue: #1c313e;
+  --dark-cyan: #24666d;
   --white: #f0f0f0;
   --black: #1e1e1e;
   --white-background: #D8EDF2;
@@ -65,7 +66,6 @@ header .nav .links .c-links {
 
 header .nav .links .c-links:hover {
   font-size: 1.5rem;
-  border-bottom: 0.25rem solid var(--cyan);
   border-left: 0.25rem solid var(--cyan);
 }
 
@@ -76,21 +76,22 @@ header .nav .links .link {
 
 header .nav .links .submenu {
   display: none;
+  margin-top: 4rem;
   position: absolute;
-  margin-top: 2.35rem;
 }
 
 header .nav .links .submenu li a {
   text-decoration: none;
-  color: #333652;
+  color: var(--dark-blue);
 }
 
 header .nav .links .submenu li {
   list-style: none;
-  transition: 0.25s;
-  padding: 0.5rem;
+  transition: .25s;
+  padding: .5rem;
   margin-left: -2rem;
   background-color: var(--dark-cyan);
+  width: 5rem;
 }
 
 header .nav .links .submenu li:first-child {
@@ -98,7 +99,7 @@ header .nav .links .submenu li:first-child {
 }
 
 header .nav .links .submenu li:last-child {
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem ;
 }
 
 header .nav .links .submenu li:hover {
@@ -179,7 +180,7 @@ main section.content div.parts .part p {
 
 main section.content div.parts .part:hover {
   scale: 1.1;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 }
 
 main section.content div.parts .part:hover::after {
@@ -187,11 +188,11 @@ main section.content div.parts .part:hover::after {
   background-image: linear-gradient(
     45deg,
     var(--transparent),
-    var(--white-background)
+    var(--light-cyan)
   );
   border-radius: 0.5rem;
   mix-blend-mode: screen;
-  opacity: 0.6;
+  opacity: 0.5;
   position: absolute;
   display: block;
   top: 0;
@@ -205,17 +206,36 @@ main section.content div.parts img {
   width: 90%;
 }
 
-main section.content.mounting p, ul {
+main section.content.mounting {
   font-size: 1.2rem;
-  margin: 0 auto .5rem auto;
+  padding: 1rem 2.5rem 1rem 2.5rem;
+}
+
+main section.content.mounting h3{
+  font-size: 1.35rem;
+}
+
+main section.content.mounting .part {
+  margin: auto;
   width: 85%;
+}
+
+main section.content.mounting img {
+  border-radius: .5rem;
+  border: .75rem solid var(--cyan);
+  transition: .25s;
+}
+
+main section.content.mounting img:hover {
+  scale: 1.04;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 }
 
 main section.content.projects .project {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 2.5rem auto 2.5rem auto;
-  width: 75%;
+  width: 80%;
 }
 
 main section.content.projects .project .description a {
@@ -235,7 +255,7 @@ main section.content.projects .project .description {
 
 main section.content.projects .project .project-image{
   background-color: var(--black);
-  padding: .75rem;
+  padding: 1rem;
   border-radius: .5rem 0 0 .5rem;   
 }
 
@@ -427,6 +447,14 @@ footer .cep a:hover {
   main div.parts {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  main section.content.mounting img {
+    width: 100%;
+  }
+
+  main section.content.mounting .part {
+    width: 95%;
   }
 
   footer {
