@@ -124,7 +124,7 @@ hr.rounded {
 
 main section.content {
   background-color: var(--white-background);
-  padding: 1rem 2.5rem 1rem 2.5rem;
+  padding: 1rem 3.5rem 1rem 3.5rem;
 }
 
 main section.content h2 {
@@ -215,7 +215,7 @@ main section.content.mounting h3{
   font-size: 1.35rem;
 }
 
-main section.content.mounting .part {
+main section.content.mounting .step {
   margin: auto;
   width: 85%;
 }
@@ -226,10 +226,47 @@ main section.content.mounting img {
   transition: .25s;
 }
 
-main section.content.mounting img:hover {
-  scale: 1.04;
+main section.content.mounting img:hover, 
+main section.content.code .image-container img:hover {
+  scale: 1.07;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 }
+
+main section.content.code p{
+  margin: auto;
+}
+
+main section.content.code .image-container img {
+  width: 100%;
+  border: .5rem solid var(--black);
+  border-radius: .5rem;
+  margin: 1rem;
+  transition: .25s;
+}
+
+main section.content.code .image-container {
+  display: flex;
+  margin: 1rem 0 1rem 0;
+}
+
+.code-block {
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding: .75rem;
+  background-color: var(--black);
+  border-radius: .5rem;
+  font-family: Consolas, monospace;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+.code-indent {
+  color: var(--cyan);
+  white-space: pre;
+}
+
 
 main section.content.projects .project {
   display: grid;
@@ -397,6 +434,15 @@ footer .cep a:hover {
   main section.content.projects .project:hover .description {
     background-color: var(--dark-blue);
     color: var(--white);
+  }
+
+  main section.content.code .image-container img {
+    width: 90%;
+  }
+  
+  main section.content.code .image-container {
+    display: inline;
+    margin: auto;
   }
 }
 

@@ -123,79 +123,129 @@
         <section class="content mounting">
           <h2>Montagem por passos</h2>
 
-          <div class="part">
+          <div class="step">
             <h3>1. Organizar o material que será usado</h3>
             <img src="./images/work-images/creation_tinkercad/circuit-creation-0.JPG" alt="imagem">
           </div>
           
-          <div class="part">
+          <div class="step">
             <h3>
               2. Conectar a perna do botão na posição e7 e a outra na posição e9 do breadboard
             </h3>
             <img src="./images/work-images/creation_tinkercad/circuit-creation-1.JPG" alt="imagem">
           </div>
           
-          <div class="part">
+          <div class="step">
             <h3>
               3. Conectar um resistor de 150 ohms na posição 2j a linha horizontal negativa e outro de 10k ohms na posição 7b a linha horizontal negativa
             </h3>
             <img src="./images/work-images/creation_tinkercad/circuit-creation-2.JPG" alt="imagem">
           </div>
           
-          <div class="part">
+          <div class="step">
             <h3>
               4. Conectar ânodo do LED verde na cordenada g2 do breadboard
             </h3>
             <img src="./images/work-images/creation_tinkercad/circuit-creation-3.JPG" alt="imagem">
           </div>
           
-          <div class="part">
+          <div class="step">
             <h3>
               5. Conectar cabo jumper no ground (GND), está a esquerda da porta 13, do Arduino na linha horizontal negativa superior
             </h3>
             <img src="./images/work-images/creation_tinkercad/circuit-creation-4.JPG" alt="imagem">
           </div>
           
-          <div class="part">
+          <div class="step">
             <h3>
               6. Conectar cabo jumper na porta 13 do Arduino na cordenada i2, logo abaixo do resistor
             </h3>
             <img src="./images/work-images/creation_tinkercad/circuit-creation-5.JPG" alt="imagem">
           </div>
           
-          <div class="part">
+          <div class="step">
             <h3>7.
               Conectar cabo jumper na porta 12 do Arduino na cordenada d7, logo abaixo da perninha inferior esquerda do pushbutton
             </h3>
             <img src="./images/work-images/creation_tinkercad/circuit-creation-6.JPG" alt="imagem">
           </div>
           
-          <div class="part">
+          <div class="step">
             <h3>
               8. Conectar cabo jumper na linha horizontal positiva inferior a cordenada a9
             </h3>
             <img src="./images/work-images/creation_tinkercad/circuit-creation-7.JPG" alt="imagem">
           </div>
           
-          <div class="part">
+          <div class="step">
             <h3>
               9. Conectar cabo jumper no ground (GND), está a esquerda de Vin, do Arduino na linha horizontal negativa superior
             </h3>
             <img src="./images/work-images/creation_tinkercad/circuit-creation-8.JPG" alt="imagem">
           </div>
           
-          <div class="part">
+          <div class="step">
             <h3>
               10. Conectar cabo jumper na porta 5V do Arduino na linha horizontal positiva inferior
             </h3>
             <img src="./images/work-images/creation_tinkercad/circuit-creation-9.JPG" alt="imagem">
           </div>
           
-          <div class="part">
+          <div class="step">
             <h3>Resultado final do circuito</h3>
             <img src="./images/work-images/creation_tinkercad/circuit-demo.JPG" alt="imagem">
           </div>
           
+        </section>
+
+        <hr class="rounded">
+
+        <section class="content code">
+          <h2>Dando vida ao circuito</h2>
+          
+            <p>
+              Os códigos que serão utilizados para dar vida ao circuito usando a linguagem de programação C++. O C++ é uma linguagem amplamente utilizada em desenvolvimento de software, conhecida por sua eficiência, flexibilidade e poder. No contexto dos circuitos eletrônicos, o C++ é frequentemente empregado para programar microcontroladores, que desempenham um papel crucial no controle e na automação de dispositivos eletrônicos. Esses microcontroladores podem ser encontrados em uma ampla gama de dispositivos, desde eletrodomésticos inteligentes até sistemas embarcados em carros e aviões.              
+            </p>
+
+          <div class="image-container">
+            <img src="./images/work-images/code-demo.jpg" alt="Foto de um computador emitindo a imagem de códigos em C++">
+            <img src="./images/work-images/creation_tinkercad/code-demo2.JPG" alt="Print tirada no Tinkercad mostrando as duas maneiras de representar um código">
+          </div>  
+
+          <pre class="code-block">
+            <code class="code-indent" id="cPlusPlusCode">
+              // C++ code 
+
+              int on_off = 0;
+              int button = 0;
+              
+              void setup() 
+              {
+              pinMode (13, OUTPUT);          
+              pinMode (12, OUTPUT);
+              pinMode (12, INPUT);
+              digitalWrite(13, LOW);
+              digitalWrite(12, LOW);
+              on_off = LOW;
+              }
+            
+              void loop() 
+              {
+              button = digitalRead (12); 
+              if (button == HIGH) {
+                if (on_off == LOW) {
+                digitalWrite(13, HIGH);
+                on_off= HIGH;
+                } else {
+                  digitalWrite(13, LOW);
+                  on_off = LOW;
+                }
+              }
+              delay(10); // Delay a little bit to improve simulation
+              }
+            </code>
+            <button onclick="copyClip()">Copy to clipboard</button>
+          </pre>
         </section>
 
         <hr class="rounded">
@@ -217,7 +267,7 @@
             
             <article class="project" id="project-2">
               <div class="project-image">
-                <img src="/images/project-images/test.jpeg" alt="Test Image">
+                <img src="../images/project-images/test.jpeg" alt="Test Image">
               </div>
               <div class="description">
                 <a href="https://pranx.com/windows-xp-simulator/" target="_blank">

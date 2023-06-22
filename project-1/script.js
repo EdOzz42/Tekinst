@@ -12,3 +12,19 @@ function clickMenu() {
     }
 }
 
+function copyClip() {
+    
+    const copyText = document.getElementById("cPlusPlusCode");
+    const storage = document.createElement('textarea');
+    const message = "Código copiado!"
+
+    storage.value = copyText.innerHTML;
+    copyText.appendChild(storage);
+    storage.select();
+    storage.setSelectionRange(0, 99999);
+    document.execCommand('copy');
+    copyText.removeChild(storage);
+
+    alert(message)
+}
+
