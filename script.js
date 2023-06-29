@@ -11,4 +11,3 @@ function clickMenu() {
         menuLinks.style.display = 'flex'
     }
 }
-
