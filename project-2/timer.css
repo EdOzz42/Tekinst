@@ -253,6 +253,14 @@ main section.content.code .image-container {
   white-space: pre;
 }
 
+main section.content.res {
+  text-align: center;
+}
+
+.video {
+  background-color: var(--black);
+  border-radius: .5rem;
+}
 
 main section.content.projects .project {
   display: grid;
