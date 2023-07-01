@@ -4,7 +4,7 @@
   --cyan: #25d3d3;
   --light-cyan: #9cebeb;
   --dark-blue: #1c313e;
-  --dark-cyan: #24666d;
+  --dark-cyan: #2a727a;
   --white: #f0f0f0;
   --black: #1e1e1e;
   --white-background: #D8EDF2;
@@ -104,11 +104,6 @@ header .nav .links .submenu li:hover {
   background-color: var(--cyan);
 }
 
-header .nav .links .submenu li:hover {
-  scale: 1.08;
-  background-color: var(--cyan);
-}
-
 header .nav .links .c-links:hover .submenu {
   display: inline-block;
 }
@@ -154,11 +149,11 @@ main section.content.about-us {
   border-radius: 1rem 1rem 0rem 0rem;
 }
 
-main section.content.about-us .image-circuit {
+main section.content.about-us .image-cep {
   border-radius: 0.5rem;
   border: var(--cyan) solid 1rem;
   margin: 1rem;
-  width: 80%;
+  width: 75%;
 }
 
 main div.parts {
@@ -222,18 +217,6 @@ main section.content.mounting .step {
   width: 85%;
 }
 
-main section.content.mounting img {
-  border-radius: .5rem;
-  border: .75rem solid var(--cyan);
-  transition: .25s;
-}
-
-main section.content.mounting img:hover, 
-main section.content.code .image-container img:hover {
-  scale: 1.07;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
-}
-
 main section.content.code p{
   margin: auto;
 }
@@ -254,8 +237,9 @@ main section.content.code .image-container {
 .code-block {
   display: block;
   width: 80%;
-  margin: auto;
   padding: .75rem;
+  margin: auto;
+  margin-top: 1rem;
   background-color: var(--black);
   border-radius: .5rem;
   font-family: Consolas, monospace;

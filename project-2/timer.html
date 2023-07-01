@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/others/tekinst-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="./timer.css">
+    <title>Timer - Montagem comentada</title>
+  </head>
+  <body>
+    <header>
+        <div class="logo-title"> 
+            <h1>Circuito Timer</h1>
+        </div>  
+        
+        <div class="nav">           
+          <span class="material-symbols-rounded"  id="hamburger-menu">
+            menu
+          </span>  
+          <ul class="links" id="menu-links">
+            <li class="c-links">
+              <label>Outros Projetos</label>
+              <ul class="submenu" id="submenu">
+                <li><a href="../index.html">Main Page</a></li>
+                <li><a href="#project-0">Artigo IAs</a></li>
+                <li><a href="#project-1">Circuito Botão-Led</a></li>
+                <li><a href="#project-2">Em breve...</a></li>
+                <li><a href="#project-3">Em breve...</a></li>
+                <li><a href="#project-4">Em breve...</a></li>
+                <li><a href="#project-5">Em breve...</a></li>
+              </ul>
+            </li>
+            <li class="c-links"><a class="link" href="#about-us">Sobre o Projeto</a></li>
+            <li class="c-links"><a class="link" href="#team">Componentes</a></li>
+            <li class="c-links"><a class="link" href="#construction">Montagem</a></li>
+          </ul>               
+        </div>
+    </header>
+    <main>
+        <section class="content about-us" id="about-us">
+            <h2>Sobre o projeto</h2>
+              <img class="image-cep" src="./content/work/timer.jpg" alt="Timer">         
+              <p>
+                O projeto escolar "Circuito Timer" foi desenvolvido pelos alunos Eduardo de Oliveira, Eduardo Antonio, Arthur Zuliani, Carlos Eduardo e Giorgio Riboldi da disciplina de Robótica com o objetivo de reforçar os conceitos básicos da eletrônica, aprimorar habilidades na montagem de circuitos e criar um simples sistema funcional que envolvesse a interação entre um circuito de Arduino e um timer. Os timers são ferramentas extremamente úteis e versáteis. Eles nos permitem controlar o tempo de forma precisa e eficiente, seja para cronometrar tarefas, estabelecer limites ou simplesmente lembrar-nos de algo importante.
+              </p>
+        </section>
+
+        <hr class="rounded">
+
+        <section class="content" id="team">
+          <h2>Componentes que vamos usar</h2>
+         
+          <div class="parts">  
+           <div class="part">
+             <img src="./content/parts-images/arduino.jpeg" alt="Imagem de um Arduino">         
+             <div class="text">
+               <h2>Arduino</h2>
+               <p>
+                Arduino é uma plataforma de prototipagem eletrônica que se tornou extremamente popular e amplamente utilizada em projetos de robótica, arte interativa etc. É baseado em uma placa de hardware de código aberto, com um microcontrolador programável e uma série de pinos de entrada e saída.
+               </p>
+             </div>
+           </div>         
+           
+             <div class="part">
+             <img src="./content/parts-images/jumpers.jpeg" alt="Imagem com vários cabos jumpers">
+             <div class="text">
+               <h2>Fio jumper (jump wire)</h2>
+               <p>
+                São fios condutores pré-fabricados, geralmente flexíveis e com conectores em suas extremidades, que permitem a conexão dos componentes eletrônicos em uma placa de prototipagem ou breadboard de forma rápida e prática.
+               </p>
+             </div>
+            </div>
+             
+            <div class="part">
+             <img src="./content/parts-images/laptop.jpg" alt="Imagem de um cabo de energia conectado a um laptop">
+             <div class="text">
+               <h2>Bateria de laptop (Energia)</h2>
+               <p>
+                A bateria de laptop é um componente essencial na montagem do circuito Botão pressionar e LED, pois fornece a fonte de energia necessária para o funcionamento do circuito. Ela é conectada ao Arduino por meio de cabos.
+               </p>
+             </div>
+            </div>
+            
+            <div class="part">
+             <img src="./content/parts-images/timer.jpg" alt="Imagem de um timer/cronômetro">
+             <div class="text">
+               <h2>Timer</h2>
+               <p>
+                O timer é uma ferramenta que permite medir e controlar o tempo de maneira precisa. Geralmente, consiste em um dispositivo eletrônico com uma tela digital que exibe números.
+               </p>
+             </div>
+            </div>
+        </section>
+
+        <hr class="rounded">
+
+        <section class="content mounting">
+          <h2>Montagem por passos</h2>
+          <h3>Aqui estão os passos para a montagem dessa budega:</h3>
+
+          <p>Passo 1: Ligue dois jumpers macho-fêmea (ou combine dois jumpers macho-macho com dois jumpers fêmea-fêmea) aos pinos GND e 5V da placa Arduino.</p>
+
+          <p>Passo 2: Conecte os jumpers macho-fêmea nos pinos GND e VCC do display 7 segmentos, respectivamente.</p>
+
+          <p>Passo 3: Utilizando mais dois jumpers macho-fêmea, conecte o pino CLK do módulo display à porta analógica A4 do Arduino.</p>
+
+          <p>Passo 4: Conecte o pino DIO do módulo display à porta analógica A5 do Arduino.</p>
+          
+        </section>
+
+        <hr class="rounded">
+
+        <section class="content code">
+          <h2>Dando vida ao circuito</h2>
+          
+            <p>
+              Os códigos que serão utilizados para dar vida ao circuito usando a linguagem de programação C++. O C++ é uma linguagem amplamente utilizada em desenvolvimento de software, conhecida por sua eficiência, flexibilidade e poder. Nessa programação, utilizaremos a
+              biblioteca “TM1637Display” desenvolvida por Avishay Orpaz, que auxiliará no controle do display. No contexto dos circuitos eletrônicos, o C++ é frequentemente empregado para programar microcontroladores, que desempenham um papel crucial no controle e na automação de dispositivos eletrônicos. Esses microcontroladores podem ser encontrados em uma ampla gama de dispositivos, desde eletrodomésticos inteligentes até sistemas embarcados em carros e aviões.              
+            </p>       
+
+          <pre class="code-block">
+            <code class="code-indent" id="cPlusPlusCode">
+              #include &lt;TM1637Display.h&gt;
+                /* Definições dos pinos utilizados. O módulo */
+                /* aceita pinos analógicos e/ou digitais. */
+                #define CLK A4
+                #define DIO A5
+                /* Cria o objeto de controle para o display */
+                /* definindo os pinos utilizados do Arduino. */
+                TM1637Display display(CLK, DIO);
+                
+                /* Configurações do programa */
+                
+                void setup() {
+                /* Define o brilho do display (0 a 15) */
+                display.setBrightness(15);
+                }
+                /* Looping infinito */
+                void loop() {
+                /* Loop para a contagem de 0 a 9999 */
+                for (int i = 0; i <= 9999; i++) {
+                /* Mostra o número atual armazenado na */
+                /* variável (false: sem zeros a esquerda */
+                /* ou true: com zeros a esquerda). */
+                display.showNumberDec(i, false);
+                /* Aguarda 1 segundo para o próximo dígito*/
+                delay(1);
+                }/* Fim do looping da contagem */
+                }/* Fim do looping infinito */
+            </code>
+            <button onclick="copyClip()">Copiar códigos!</button>
+          </pre>
+        </section>
+
+        <hr class="rounded">
+
+        <section class="content projects" id="projects">
+            <h2>Outros projetos</h2>
+            
+            <article class="project" id="project-0">
+              <div class="project-image">
+                <img src="../images/project-images/glados.jpg" alt="Imagem da glados, Portal 2">
+              </div>
+              <div class="description">
+                <a href="../project-0/opinion-article.html" target="_blank">
+                  <h3>Artigo de Opinião sobre as IAs</h3>
+                  <p>Descubra o futuro das inteligências artificiais e as civilizações do amanhã no artigo do Oliveira! Prepare-se para mergulhar em uma jornada repleta de possibilidades e desafios, enquanto exploramos as duas faces da moeda desse avanço tecnológico. Vamos desvendar os impactos na sociedade, os riscos e as oportunidades que as IAs trazem consigo. Prepare-se para pensar sobre o papel das IAs em nossas vidas, questionar seus limites e desvendar como podemos usar essa tecnologia para criar um futuro mais promissor. Clique nesse texto para ter acesso se você tem interesse!</p>
+                </a>
+              </div>
+            </article>
+            
+            <article class="project" id="project-1">
+              <div class="project-image">
+                <img src="../images/project-images/circuit.jpg" alt="Imagem ilustrativa de um circuito botão-led">
+              </div>
+              <div class="description">
+                <a href="../project-1/circuit-led.html" target="_blank">
+                  <h3>Circuito botão-led</h3>
+                  <p>Imagine controlar a luz com um simples toque! Nesse projeto "Circuito Botão-LED" terá um botão que permite acender e apagar um LED com um único movimento. Surpreenda-se com o nosso conteúdo de montagem comentada e com o resultado. Vamos lá, Jump In e veja a montagem comentada do circuito botão-LED!</p>
+                </a>
+              </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+      <div class="info">
+        <div class="tekinst">
+          <p>@Tekinst</p>
+        </div>
+        <div class="cep">
+          <a href="https://www.cep.pr.gov.br/" target="_blank">
+            <img src="../images/others/cep-logo.png" alt="Logo do Colégio Estadual do Paraná">
+            <p>Colégio Estadual do Paraná</p>
+          </a>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/xqkoodqn" method="POST" target="_blank" class="message-form">
+        <label>
+          Seu email:
+          <input type="email" name="email">
+        </label>
+        <label>
+          Sua mensagem: <br>
+          <textarea name="message"></textarea>
+        </label>
+        <button type="submit">Enviar</button>
+      </form>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

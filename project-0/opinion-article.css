@@ -6,7 +6,7 @@
   --black: #1f1f1f;
   --blue-gray: #6d7f8e;
   --white: #f0f0f0;
-  --gray: #656565;
+  --gray: #5b5b5b;
   --white-background-variation: #d4d4d4;
   --transparent: rgba(0, 0, 0, 0);
 }
@@ -83,32 +83,30 @@ header .nav .links .link {
 
 header .nav .links .submenu {
   display: none;
-  margin-top: 2.5rem;
+  height: 8rem;
+  width: 8rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: var(--bright-pink) var(--black);
+  scrollbar-width: thin;
   position: absolute;
+  margin-top: 2rem;
 }
 
-header .nav .links .submenu li a{
+header .nav .links .submenu li a {
   text-decoration: none;
-  color: #333652;
+  color: var(--neon-green);
 }
 
-header .nav .links .submenu li{
+header .nav .links .submenu li {
   list-style: none;
-  transition: .25s;
-  padding: .5rem;
+  transition: 0.25s;
+  padding: 0.5rem;
   margin-left: -2rem;
-  background-color: var(--blue-gray);
+  background-color: var(--black);
 }
 
-header .nav .links .submenu li:first-child {
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
-header .nav .links .submenu li:last-child {
-  border-radius: 0 0 0.5rem 0.5rem ;
-}
-
-header .nav .links .submenu li:hover {
+header .nav .links .submenu li:hover{
   scale: 1.08;
   background-color: var(--bright-pink);
 }
