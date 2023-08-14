@@ -86,14 +86,14 @@ header .nav .links .link {
 
 header .nav .links .submenu {
   display: none;
-  height: 8rem;
-  width: 8rem;
+  height: 10rem;
+  width: 10rem;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-color: var(--bright-yellow) var(--pastel-blue);
   scrollbar-width: thin;
   position: absolute;
-  margin-top: 2rem;
+  margin-top: 2.25rem;
 }
 
 header .nav .links .submenu li a {
@@ -105,7 +105,7 @@ header .nav .links .submenu li {
   list-style: none;
   transition: 0.25s;
   padding: 0.5rem;
-  margin-left: -2rem;
+  margin-left: -1.5rem;
   background-color: var(--blue-gray);
 }
 
