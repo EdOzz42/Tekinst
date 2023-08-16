@@ -142,16 +142,37 @@ main section.content p {
   font-size: 1.2rem;
 }
 
+main section.content.about-us {
+  text-align: center;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+
+main section.content.about-us p, ol, ul {
+  width: 85%;
+}
+
 main section.content.about-us p {
   text-indent: 3ch;
   margin: 0 auto 0.5rem auto;
   text-align: start;
-  width: 85%;
 }
 
-main section.content.about-us {
+main section.content.about-us ul, ol {
+  font-size: 1.2rem;
+  margin: 0 auto 0.5rem auto;
+  text-align: start;  
+}
+
+main section.content.about-us li {
+  margin-bottom: .4rem;
+}
+
+main section.content.about-us .look-down {
+  font-weight: bold;
   text-align: center;
-  border-radius: 1rem 1rem 0rem 0rem;
+  font-size: 1.3rem;
+  background-color: #25d3d3;
+  padding: .25rem;
 }
 
 main section.content.about-us .image-circuit {
@@ -233,9 +254,17 @@ main section.content.mounting img {
   width: 85%;
 }
 
+main section.content.code img {
+  border-radius: .5rem;
+  border: .5rem solid var(--cyan);
+  transition: .25s;
+  margin: 2rem auto;
+  width: 90%;
+}
+
 main section.content.mounting img:hover, 
-main section.content.code .image-container img:hover {
-  scale: 1.07;
+main section.content.code  img:hover {
+  scale: 1.15;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 }
 
@@ -243,8 +272,9 @@ main section.content.code p{
   margin: 1rem auto;
 }
 .code-block {
+  text-align: start;
   display: block;
-  width: 80%;
+  width: 90%;
   margin: auto;
   padding: .75rem;
   background-color: var(--black);
@@ -260,6 +290,22 @@ main section.content.code p{
   white-space: pre;
 }
 
+main section.content.code button {
+  border-radius: .5rem;
+  border: .2rem solid var(--cyan);
+  background-color: var(--dark-blue);
+  color: var(--light-cyan);
+  transition: .25s;
+}
+
+main section.content.code button:hover {
+  background-color: var(--cyan);
+  color: var(--black);
+}
+
+main section.content.code .functional {
+  text-align: center;
+}
 
 main section.content.projects .project {
   display: grid;

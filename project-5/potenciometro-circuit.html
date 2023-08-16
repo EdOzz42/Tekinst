@@ -41,9 +41,37 @@
         <section class="content about-us" id="about-us">
             <h2>Sobre o projeto</h2>
                 <img class="image-circuit" src="./images/video.gif" alt="Gif do circuito super semáfaro funcionando">         
-              <p>
-                Este projeto escolar, intitulado "Potenciômetro", foi desenvolvido pelos alunos Oliveira (18), Arthur Zuliani(10), Eduardo Antonio(17), Giorgio(22) e Carlos Eduardo(IDK) como parte da disciplina de Robótica. O objetivo do projeto era aprender sobre eletrônica básica, desenvolver habilidades de montagem de circuitos e criar um sistema simples que envolvesse a interação entre o precionar de um botão e um LED. Dentro do contexto da crescente importância da robótica e da automação no mundo contemporâneo, a compreensão dos princípios básicos de eletrônica, um  pouco de código e a capacidade de criar circuitos simples são maneiras de começar a desenvolver habilidades FODAS para o futuro profissional.
-              </p>
+            <h3>O que um potenciômetro?</h3>
+            <p>No vasto campo da eletrônica e engenharia, existem dispositivos que desempenham papéis fundamentais em uma variedade de circuitos e sistemas. Um desses componentes versáteis é o potenciômetro, muitas vezes conhecido como "pot" para abreviar. O potenciômetro é um dispositivo de controle variável que desempenha um papel crucial em ajustes e medições precisas de tensão, corrente e outros parâmetros elétricos. Seu funcionamento simples torna-o uma ferramenta indispensável em uma infinidade de aplicações, desde eletrônica básica até seu headset gamer.
+            </p>
+
+            <h3>Funcionalidades do Potenciômetro:</h3>
+            <p>Um potenciômetro é composto por uma resistência ajustável e um cursor móvel que percorre a extensão dessa resistência. Isso permite que ele seja utilizado para ajustar níveis de tensão, volume, brilho, ganho e vários outros parâmetros em sistemas eletrônicos. Sua operação é baseada na variação da resistência elétrica, que pode ser ajustada manualmente ou automaticamente em alguns casos. Essa característica singular confere ao potenciômetro uma gama diversificada de funcionalidades em diferentes cenários.</p>
+
+            <h3>Exemplos de Aplicações:</h3>
+            <ol>
+              <li><strong>Eletrônica de Áudio:</strong> Potenciômetros são encontrados em amplificadores, mixers, sistemas de som e em seu headset gamer, onde são usados para controlar o volume e a tonalidade.
+              </li>
+              <li><strong>Eletrônica Automotiva:</strong> São empregados em painéis de controle de carros para ajustar o brilho das luzes do painel e a intensidade do som do sistema de áudio.
+              </li>
+              <li><strong>Eletrônica Industrial:</strong> Utilizados em maquinários e sistemas de automação para ajustar velocidades, níveis de pressão e outros parâmetros críticos.</li>
+              <li><strong>Eletrônica Residencial:</strong> Presentes em dispositivos como ventiladores de teto, fornos elétricos e sistemas de climatização, permitindo ajustes precisos.</li>
+              <li><strong>Instrumentação Científica:</strong> Encontrados em equipamentos de medição e laboratórios, para calibrar e ajustar instrumentos de medida.
+              </li>
+            </ol>
+
+            <h3>Participantes do Projeto:</h3>
+            <p>Este projeto sobre o que é um potenciômetro teve a participação de 5 alunos. São eles:</p>
+
+            <ul>
+              <li>Ed. Oliveira 18</li>
+              <li>Arthur Zuliani 10</li>
+              <li>Giorgio Riboldi 22</li>
+              <li>Ed. Antonio</li>
+              <li>Carlos Eduardo 39</li>
+            </ul>
+
+            <p class="look-down">Logo abaixo, você verá a nossa montagem de um circuito que envolve esse componente.</p>
         </section>
 
         <hr class="rounded">
@@ -121,11 +149,26 @@
           </div>
 
           <div class="step">
-            <h3>txt</h3>
-            <img src="./images/stf.jpg" alt="imagem">
+            <h3>0. Posicionar potenciômetro</h3>
+            <img src="./images/tinker/tinker0.JPG" alt="Print do tinkercad - passo 1">
+          </div>
+
+          <div class="step">
+            <h3>1. Conectar fio jumper na porta analógica do arduino ao terminal móvel do potenciômetro</h3>
+            <img src="./images/tinker/tinker1.JPG" alt="Print do tinkercad - passo 2">
+          </div>
+
+          <div class="step">
+            <h3>2. Conectar um jumper no 5v do arduino ao terminal direito do potenciômetro</h3>
+            <img src="./images/tinker/tinker2.JPG" alt="Print do tinkercad - passo 3">
           </div>
           
-          <p></p>
+          <div class="step">
+            <h3>3. Conectar um jumper no GND do arduino ao terminal esquerdo do potenciômetro</h3>
+            <img src="./images/tinker/tinker3.JPG" alt="Print do tinkercad - passo 3">
+          </div>
+          
+
         </section>
 
         <hr class="rounded">
@@ -136,23 +179,25 @@
             <p>
               Desvende os segredos por trás dos circuitos com a "magia" (claro que não é magia, só usei esse termo para ficar mais emocionante esse texto ;)) da programação C++. Esta linguagem, conhecida por sua eficiência e versatilidade, desempenha um papel de destaque no reino da eletrônica. Sob os fios e conexões, reside um microcontrolador, programado com C++, que assume o comando com maestria. Imagine, de termostatos inteligentes a drones, todos alimentados pelo poder do C++. Embarque nessa jornada eletrônica e torne-se o maestro da tecnologia! Ou coloque o damn código para testar XD          
             </p>
-
-          <pre class="code-block">
-            <code class="code-indent" id="cPlusPlusCode">
-              int potenc = 0;
-
-              void setup() {
-              Serial.begin(9600);
-              }
-
-              void loop() {
-              potenc = analogRead(A0);
-              // Esse serial tem a mesma finalidade do console.log no Javascript 
-              Serial.println(potenciometro);
-              delay(100);
-            </code>
-            <button onclick="copyClip()">Copiar códigos!</button>
-          </pre>
+          
+          <div class="functional">
+            <img src="images/tinker/tinkercad-main.jpg" alt="Print no tinkercad que demonstra a regulação do nível de energia graças ao potenciômetro">
+            <pre class="code-block">
+              <code class="code-indent" id="cPlusPlusCode">
+    int potenc = 0;
+    void setup() {
+    Serial.begin(9600);
+    }
+    void loop() {
+    potenc = analogRead(A0);
+    // No print do Tinker é possivel ver a mudança da intensidade da corrente no serial monitor
+    // Esse serial tem a mesma finalidade do console.log no Javascript
+    Serial.println(potenciometro);
+    delay(100);
+              </code>
+    <button onclick="copyClip()">Copiar códigos!</button>
+            </pre>
+          </div>
         </section>
 
         <hr class="rounded">

@@ -269,6 +269,18 @@ main section.content.code .image-container {
   white-space: pre;
 }
 
+main section.content.code button {
+  border-radius: .5rem;
+  border: .2rem solid var(--cyan);
+  background-color: var(--dark-blue);
+  color: var(--light-cyan);
+  transition: .25s;
+}
+
+main section.content.code button:hover {
+  background-color: var(--cyan);
+  color: var(--black);
+}
 
 main section.content.projects .project {
   display: grid;
