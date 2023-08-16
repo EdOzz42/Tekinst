@@ -41,16 +41,45 @@
     </header>
     <main>
         <section class="content about-us" id="about-us">
-            <h2>Sobre o projeto</h2>
-                <img class="image-circuit" src="./images/video.gif" alt="Gif do circuito super semáfaro funcionando">         
-              <p>
-                Este projeto escolar, intitulado "CircuitSound", foi desenvolvido pelos alunos Oliveira (18), Arthur Zuliani(10), Eduardo Antonio(17), Giorgio(22) e Carlos Eduardo(IDK) como parte da disciplina de Robótica. O objetivo do projeto era aprender sobre eletrônica básica, desenvolver habilidades de montagem de circuitos e criar um sistema simples que envolvesse a interação entre o precionar de um botão e um LED. Dentro do contexto da crescente importância da robótica e da automação no mundo contemporâneo, a compreensão dos princípios básicos de eletrônica, um  pouco de código e a capacidade de criar circuitos simples são maneiras de começar a desenvolver habilidades FODAS para o futuro profissional.
-              </p>
+            <h2>Sobre o projetinho</h2>
+                <img class="image-circuit" src="./images/video.gif" alt="Gif do circuito buzzer funcionando">         
+            <p>
+              Em um mundo cada vez mais dominado por dispositivos eletrônicos, é fácil esquecer a importância dos elementos auditivos que nos cercam. Um desses elementos é o buzzer. Esse componente é responsável por adicionar uma dimensão sonora a uma variedade de aplicações, desde dispositivos de notificação até sistemas de alarme. Ao compreender a funcionalidade e versatilidade do buzzer.
+            </p>
+
+            <h3>Funcionalidades do Buzzer:</h3> 
+            <p>O buzzer, muitas vezes referido como campainha eletrônica, é um transdutor eletromecânico que converte um sinal elétrico em som audível. Sua operação é direta: ao aplicar uma tensão, ele gera uma frequência sonora específica, produzindo um som contínuo ou intermitente, dependendo da aplicação. Essa característica torna o buzzer uma ferramenta essencial para fornecer feedback sonoro em situações onde o aspecto auditivo é fundamental, como em alarmes e sistemas de aviso.</p>
+
+            <h3>Exemplos de Aplicações:</h3>
+            <ol>
+              <li><strong>Dispositivos de Notificação:</strong> Buzzers são usados em telefones celulares, relógios inteligentes e eletrodomésticos para alertar os usuários sobre chamadas, mensagens ou eventos programados.
+              </li>
+
+              <li><strong>Sistemas de Segurança:</strong> São parte integrante de sistemas de alarme residenciais e comerciais, emitindo alertas audíveis em caso de invasões, incêndios ou outras emergências.</li>
+
+              <li><strong>Automóveis:</strong> Presentes em carros para indicar cintos de segurança desatados, portas abertas ou problemas de motor.</li>
+
+              <li><strong>Equipamentos Médicos:</strong> Utilizados para sinalizar alarmes em monitores médicos e dispositivos de assistência à saúde.</li>
+
+              <li><strong>Eletrônica Educacional (Não é mesmo?!):</strong> Empregados em kits de aprendizado para ensinar princípios básicos de eletrônica e circuitos.</li>
+            </ol>
+
+            <h3>Participantes do Projeto:</h3>
+            <p>Este projeto de exploração do buzzer foi desenvolvido por 5 participantes. São eles:</p>
+            <ul>
+              <li>Ed. Oliveira 18</li>
+              <li>Arthur Zuliani 10</li>
+              <li>Giorgio Riboldi 22</li>
+              <li>Ed. Antonio 17</li>
+              <li>Carlos Eduardo 39</li>
+            </ul>
+
+            <p class="look-down">Deslize para baixo, você verá a nossa montagem de um circuito que envolve esse componente.</p>
         </section>
 
         <hr class="rounded">
 
-        <section class="content" id="team">
+        <section class="content">
           <h2>Componentes que vamos usar</h2>
          
           <div class="parts">  
@@ -123,11 +152,29 @@
           </div>
 
           <div class="step">
-            <h3>txt</h3>
-            <img src="./images/stf.jpg" alt="imagem">
+            <h3>Posicionar o buzer na breadboard</h3>
+            <img src="./images/tinker/tinker0.JPG" alt="Passo 1">
+          </div>
+          <div class="step">
+            <h3>Conectar um jumper wire entre a porta 8 do arduino e o polo negativo do buzzer</h3>
+            <img src="./images/tinker/tinker1.JPG" alt="Passo 2">
+          </div>
+
+          <div class="step">
+            <h3>Conectar um jumper wire entre o GND do arduino até a linha negativa superior</h3>
+            <img src="./images/tinker/tinker2.JPG" alt="Passo 3">
+          </div>
+
+          <div class="step">
+            <h3>Conectar um jumper entre a linha negativa superior do breadboard ao polo positivo do buzzer</h3>
+            <img src="./images/tinker/tinker3.JPG" alt="Passo 4">
           </div>
           
-          <p></p>
+          <div class="step">
+            <h3>Pronto!</h3>
+            <img src="./images/buzzer.jpg" alt="imagem">
+          </div>         
+          
         </section>
 
         <hr class="rounded">
@@ -139,28 +186,31 @@
               Prepare-se para dar vida ao circuito por meio dos códigos de programação C++. Com sua sintaxe elegante e poderosa, o C++ se destaca como a escolha primordial para desenvolvimento de software. Navegando pelas correntes elétricas, o C++ é uma linguagem frequentemente adotada no universo dos microcontroladores. Esses minúsculos cérebros eletrônicos governam e orquestram dispositivos, desde máquinas de café inteligentes até intricados sistemas de navegação em espaçonaves. Sinta o pulso da tecnologia enquanto você mergulha no mundo eletrizante do C++!            
             </p>
 
-          <pre class="code-block">
-            <code class="code-indent" id="cPlusPlusCode">
-              #define buzzer 8
+          <div class="functional">
+            <img src="./images/code.jpg" alt="Imagem de um computador exibindo 'Arduino Create for Education'">
+            <pre class="code-block">
+              <code class="code-indent" id="cPlusPlusCode">
+    #define buzzer 8
 
-              void setup()
-              {
-              pinMode(buzzer,
-              OUTPUT);
-              noTone(buzzer);
-              }
-              
-              void loop()
-              {
-              tone(buzzer, 262, 1000);
-              tone(buzzer, 294, 1000);
-              tone(buzzer, 330, 1000);
-              tone(buzzer, 349, 1000);
-              tone(buzzer, 392, 1000);
-              }
-            </code>
-            <button onclick="copyClip()">Copiar códigos!</button>
-          </pre>
+    void setup()
+    {
+    pinMode(buzzer,
+    OUTPUT);
+    noTone(buzzer);
+    }
+    
+    void loop()
+    {
+    tone(buzzer, 262, 1000);
+    tone(buzzer, 294, 1000);
+    tone(buzzer, 330, 1000);
+    tone(buzzer, 349, 1000);
+    tone(buzzer, 392, 1000);
+    }
+              </code>
+                <button onclick="copyClip()">Copiar códigos!</button>
+            </pre>
+          </div>
         </section>
 
         <hr class="rounded">

@@ -142,11 +142,32 @@ main section.content p {
   font-size: 1.2rem;
 }
 
+main section.content.about-us p, ol, ul {
+  width: 85%;
+}
+
 main section.content.about-us p {
   text-indent: 3ch;
   margin: 0 auto 0.5rem auto;
   text-align: start;
-  width: 85%;
+}
+
+main section.content.about-us ul, ol {
+  font-size: 1.2rem;
+  margin: 0 auto 0.5rem auto;
+  text-align: start;  
+}
+
+main section.content.about-us li {
+  margin-bottom: .4rem;
+}
+
+main section.content.about-us .look-down {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.3rem;
+  background-color: #25d3d3;
+  padding: .25rem;
 }
 
 main section.content.about-us {
@@ -226,15 +247,19 @@ main section.content.mounting .step {
   width: 85%;
 }
 
-main section.content.mounting img {
+main section.content.mounting img, main section.content.code img {
   border-radius: .5rem;
   border: .75rem solid var(--cyan);
   transition: .25s;
   width: 85%;
 }
 
+main section.content.code .functional {
+  text-align: center;
+}
+
 main section.content.mounting img:hover, 
-main section.content.code .image-container img:hover {
+main section.content.code img:hover {
   scale: 1.07;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 }
@@ -243,9 +268,10 @@ main section.content.code p{
   margin: 1rem auto;
 }
 .code-block {
+  text-align: start;
   display: block;
   width: 80%;
-  margin: auto;
+  margin: 1rem auto;
   padding: .75rem;
   background-color: var(--black);
   border-radius: .5rem;
