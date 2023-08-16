@@ -235,7 +235,7 @@ main section.content.mounting img {
 
 main section.content.mounting img:hover, 
 main section.content.code .image-container img:hover {
-  scale: 1.07;
+  scale: 1.15;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 }
 

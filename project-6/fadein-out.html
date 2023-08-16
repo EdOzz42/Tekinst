@@ -40,11 +40,37 @@
     </header>
     <main>
         <section class="content about-us" id="about-us">
-            <h2>Sobre o projeto</h2>
+            <h2>Sobre o projetinhozin</h2>
                 <img class="image-circuit" src="./images/video.gif" alt="Gif do circuito super semáfaro funcionando">         
-              <p>
-                Este projeto escolar, intitulado "ElectroFade", foi desenvolvido pelos alunos Oliveira (18), Arthur Zuliani(10), Eduardo Antonio(17), Giorgio(22) e Carlos Eduardo(IDK) como parte da disciplina de Robótica. O objetivo do projeto era aprender sobre eletrônica básica, desenvolver habilidades de montagem de circuitos e criar um sistema simples que envolvesse a interação entre o precionar de um botão e um LED. Dentro do contexto da crescente importância da robótica e da automação no mundo contemporâneo, a compreensão dos princípios básicos de eletrônica, um  pouco de código e a capacidade de criar circuitos simples são maneiras de começar a desenvolver habilidades FODAS para o futuro profissional.
-              </p>
+              <p>A interação entre a eletrônica e a estética visual sempre despertou fascínio e criatividade. Um exemplo é o circuito com LED de efeito "fade in" e "fade out". Esse projeto combina a simplicidade dos diodos emissores de luz (LEDs) com a elegância de transições suaves de brilho, criando um efeito luminoso que atrai olhares e desperta a imaginação. Ao explorar as funcionalidades desse circuito, entenderemos suas aplicações artísticas e práticas, demonstrando como a tecnologia pode ser integrada a obras visuais ou audiovisuais.</p>
+
+            <h3>Funcionalidades do Circuito LED Fade In e Fade Out:</h3>  
+            <p>O circuito LED "fade in" e "fade out" é projetado para controlar o brilho de um ou mais LEDs de maneira gradual e suave. Ele utiliza componentes eletrônicos simples, como resistores e ledzinhos para controlar a corrente elétrica que flui através dos LEDs. O resultado é um efeito visual encantador no qual os LEDs aumentam gradualmente de intensidade luminosa (fade in) e depois diminuem de maneira suave (fade out). Essa capacidade de criar transições de luz suaves torna o circuito adequado para aplicações que vão desde iluminação de ambientes até cenários artísticos e espetáculos.</p>
+
+            <h3>Exemplos de Aplicações Criativas Com Esse Efeito:</h3>
+            <ol>
+              <li><strong>Decoração Residencial:</strong> O circuito pode ser usado para criar iluminação ambiente suave em cômodos, corredores ou espaços de convivência.</li>
+
+              <li><strong>Iluminação Cênica:</strong> Em eventos ou apresentações artísticas, o efeito fade in e fade out adiciona drama e ênfase visual.</li>
+
+              <li><strong>Instalações Artísticas:</strong> Artistas visuais podem incorporar o efeito luminoso em suas obras para criar impacto emocional e estético.</li>
+
+              <li><strong>Para Educar (Huh! Não é mesmo?):</strong> O projeto pode ser usado como uma introdução prática à eletrônica para estudantes, demonstrando conceitos de controle de brilho e transições.</li>
+            </ol>
+
+            <h3>Participantes do Projeto:</h3>
+            <p>Este empolgante projeto de circuito LED "fade in" e "fade out" terá 5 desenvolvedores. São eles:
+            </p>
+
+            <ul>
+              <li>Ed. Oliveira 18</li>
+              <li>Arthur Zuliani 10</li>
+              <li>Giorgio Riboldi 22</li>
+              <li>Ed. Antonio 17</li>
+              <li>Carlos Eduardo 39</li>
+            </ul>
+
+            <p class="look-down">Abaixo está a montagem de um circuito fade in e out.</p>
         </section>
 
         <hr class="rounded">
@@ -133,8 +159,20 @@
           </div>
 
           <div class="step">
-            <h3>txt</h3>
-            <img src="./images/stf.jpg" alt="imagem">
+            <h3>0. Posicionar um LED azul (Sim, tem que ser AZUL!) na breadboard</h3>
+            <img src="./images/tinker/tinker0.JPG" alt="Passo 0">
+          </div>
+          <div class="step">
+            <h3>1. No ânodo do LED conectar um resistor de 220 Ohms</h3>
+            <img src="./images/tinker/tinker1.JPG" alt="Passo 1">
+          </div>
+          <div class="step">
+            <h3>2. Conectar fio jumper machão-machão entre o GND do arduino com o terminal restante do resistor (terminal 2)</h3>
+            <img src="./images/tinker/tinker2.JPG" alt="Passo 2">
+          </div>
+          <div class="step">
+            <h3>3. Conectar um jumper wire macho-macho no cátodo do LED</h3>
+            <img src="./images/tinker/tinker3.JPG" alt="Passo 3">
           </div>
           
           <p></p>
@@ -149,29 +187,33 @@
               Desperte o circuito de forma surpreendente usando a poesia dos códigos C++. Como uma linguagem que domina a arte da eficiência e da adaptabilidade, o C++ se destaca em cenas eletrônicas. Siga os caminhos elétricos até os microcontroladores, dotados de inteligência C++, que regem com maestria nossos dispositivos. De assistentes virtuais a sistemas de segurança, o C++ é a nota alta que ressoa nos corações dos aparelhos. Abra esta porta para um mundo de eletrônica onde os sonhos são tecidos em linhas de código.            
             </p>
 
-          <pre class="code-block">
-            <code class="code-indent" id="cPlusPlusCode">
-              void setup() {
-                pinMode(9, OUTPUT);
-              }
-              
-              void loop() {
-               
-                //fade-in
-                for(int r=0; r<= 254; r++){
-                  analogWrite(9, r);
-                  delay(1500);
-                }
-               
-                // fade-out
-                for(int r=254; r>= 0; r){
-                  analogWrite(9, r);
-                  delay(1500);
-                }
-              }
-            </code>
-            <button onclick="copyClip()">Copiar códigos!</button>
-          </pre>
+<div class="functional">
+  <img src="images/code.jpg" alt="Foto de um computador exibindo linhas de códigos C++">
+  
+            <pre class="code-block">
+              <code class="code-indent" id="cPlusPlusCode">
+      void setup() {
+        pinMode(9, OUTPUT);
+      }
+  
+      void loop() {
+  
+        //fade-in
+        for(int r=0; r<= 254; r++){
+          analogWrite(9, r);
+          delay(1500);
+        }
+  
+        // fade-out
+        for(int r=254; r>= 0; r){
+          analogWrite(9, r);
+          delay(1500);
+        }
+      }
+              </code>
+      <button onclick="copyClip()">Copiar códigos!</button>
+            </pre>
+</div>
         </section>
 
         <hr class="rounded">
