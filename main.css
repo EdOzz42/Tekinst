@@ -358,7 +358,8 @@ footer .cep a {
 }
 
 footer .cep img {
-  width: 5rem;
+  width: 7.5rem;
+  border-radius: .75rem;
   padding: 0.5rem;
 }
 
