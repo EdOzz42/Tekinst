@@ -42,9 +42,31 @@
         <section class="content about-us" id="about-us">
             <h2>Sobre o projeto</h2>
                 <img class="image-circuit" src="./images/super-trafic-light.gif" alt="Gif do circuito super semáfaro funcionando">         
-              <p>
-                Este projeto escolar, intitulado "Ultra Semáfaro", foi desenvolvido pelos alunos Oliveira (18), Arthur Zuliani(10), Eduardo Antonio(17), Giorgio(22) e Carlos Eduardo(IDK) como parte da disciplina de Robótica. O objetivo do projeto era aprender sobre eletrônica básica, desenvolver habilidades de montagem de circuitos e criar um sistema simples que envolvesse a interação entre o precionar de um botão e um LED. Dentro do contexto da crescente importância da robótica e da automação no mundo contemporâneo, a compreensão dos princípios básicos de eletrônica, um  pouco de código e a capacidade de criar circuitos simples são maneiras de começar a desenvolver habilidades FODAS para o futuro profissional.
-              </p>
+            <p>Em nosso cotidiano movimentado, a eficiência e segurança do tráfego rodoviário são essenciais. Nesse contexto, a tecnologia pode desempenhar um papel fundamental na criação de soluções inteligentes e interativas. O projeto do semáforo Arduino com buzzer e botão é um exemplo eloquente dessa interseção entre eletrônica e mobilidade urbana. Ao combinar um semáforo simulado, um buzzer para feedback sonoro e um botão de controle, esse projeto não apenas demonstra o potencial do Arduino, mas também ilustra como a tecnologia pode aprimorar sistemas de tráfego e segurança.
+            </p>
+
+            <h3>Funcionalidades do Semáforo Arduino com Buzzer e Botão:</h3>
+            <p>O circuito do semáforo Arduino com buzzer e botão é um exercício em automação e controle. Utilizando a plataforma Arduino, um microcontrolador programável, o projeto simula o funcionamento de um semáforo funcional, com luzes indicativas de trânsito. Além disso, um buzzer integrado fornece um feedback sonoro sincronizado com as mudanças das luzes, imitando o sinal sonoro de um semáforo. Um botão é utilizado para permitir a interação do usuário, permitindo que ele alterne entre os estados do semáforo.</p>
+
+            <h3>Exemplos de Aplicações:</h3>
+            <ol>
+              <li><strong>Demonstração de Conceitos:</strong> Pode ser utilizado para ilustrar os princípios básicos de automação, controle e integração de dispositivos eletrônicos.</li>
+
+              <li><strong>Protótipo para Soluções Urbanas:</strong> Serve como protótipo de baixo custo para testar conceitos de controle de tráfego e segurança em ambientes urbanos.</li>
+
+              <li><strong>Aprendizado Prático (Huh!? Interessante):</strong> Oferece uma experiência prática para estudantes que desejam explorar a programação de microcontroladores e a automação.</li>
+            </ol>
+
+            <h3>Participantes do Projeto:</h3>
+            <ul>
+              <li>Ed. Oliveira 18</li>
+              <li>Arthur Zuliani 10</li>
+              <li>Giorgio Riboldi 22</li>
+              <li>Ed. Antonio 17</li>
+              <li>Carlos Eduardo 39</li>
+            </ul>
+            
+            <p class="look-down">Logo abaixo, apresentamos a nossa montagem de um circuito que incorpora esse semáfaro Arduino</p>
         </section>
 
         <hr class="rounded">
@@ -136,90 +158,48 @@
         <section class="content mounting">
           <h2>Montagem por passos</h2>
 
-          <p>Quem vai explicar para você a montagem passo por passo vai ser a Jacinta Fulera (Kpoper desde os 13 anos).</p>
-
           <div class="step">
-            <h3>Passo 0: Oie! Jacinta Fulera aqui! Primeiro a gente precisa organizar os itens que vamos usar certinho ;).
-              Vamos precisar de: 
+            <h3>Primeiramente, vamos precisar de: </h3>
               <ul>
-                <li>Arduino</li>
+                <li>Um Arduino</li>
                 <li>5 LEDs (2 vermelhos, 2 verdes e 1 laranja/amarelo)</li>
-                <li>5 resistências 330 Ω</li>
+                <li>6 resistências 330 Ω</li>
                 <li>1 botão + 1 resitência 1 kΩ</li>
-                <li>1 Buzzer + 1 resistência 330 Ω</li>
-                <li>Cabos jumpers (PS.: Sabia que o Juncookie Cover sempre jump quando começa o show?)</li>
+                <li>1 Buzzer</li>
+                <li>19 Cabos jumpers machos-machos</li>
               </ul>
-            </h3>
           </div>
 
           <div class="step">
-            <h3>Passo 1: Primeiro, a gente pega esses LEDs maravilhosos e conecta eles na breadboard. Não esquece de dar um match com as resistências (todas com 330 Ω, amiga!). Lembra de casar os LEDs na posição correta e unir a perninha negativa com a resistência, e aí manda o flow da resistência até o negativo/ground. As perninhas positivas dos LEDs vão ser conectadas aos fios das portas digitais do Arduino, que é o grande astro dessa parada! 🔌✨</h3>
+            <h3>Passo 1 - conectando alguns cabos jumpers</h3>
+            <img src="./images/tinker/tinker0.JPG" alt="Passo 1 - conectando alguns cabos jumpers">
           </div>
-          
           <div class="step">
-            <h3>
-              Passo 2: Se você tiver um buzzer pra colocar uma música nessa festa, agora é a hora! Conecta a resistência de 300 Ω na perna negativa do buzzer e conecta ela ao negativo, igualzinho fizemos com os LEDs. Ah, a gente sempre alinhada nas conexões, né? 😉
-            </h3>
-          </div>
-          
-          <div class="step">
-            <h3>
-              Passo 3: Tá na hora de brilhar com os semáforos dos peões! Pega os LEDs vermelho e verde e posiciona eles do mesmo jeitinho que fizemos com os semáforos dos carros. E não esquece das resistências, porque nessa dança todo mundo precisa estar em sintonia!
-            </h3>
-          </div>
-          
-          <div class="step">
-            <h3>
-              Passo 4: Agora olha só o line-up: 3 LEDs para os carros, nas cores vermelho, amarelo e verde, um buzzer (se quiser dar um toque musical), e 2 LEDs maravilhosos, vermelho e verde, para os peões. Depois desse show dos peões, a gente coloca o botão no palco. Pega a resistência de 1 kΩ e conecta em uma das perninhas do botão, e aí conecta ela lá no negativo. A outra perninha do botão vai pro positivo (5V) da breadboard, de um jeito mega estiloso!
-            </h3>
-          </div>
-          
-          <div class="step">
-            <h3>
-              Passo 5: Agora vem a hora de fazer as conexões brilharem com os fios que vão controlar as luzes dos semáforos. Nessa coreografia, a gente começa da esquerda pra direita!
-            </h3>
-          </div>
-          
-          <div class="step">
-            <h3>
-              Passo 6: Pro LED vermelho do semáforo dos pedestres, liga um fiozinho massa na porta digital 10.
-            </h3>
-          </div>
-          
-          <div class="step">
-            <h3>Passo 7: Pro LED amarelo, manda um fiozinho show na porta digital 9.
-            </h3>
-          </div>
-          
-          <div class="step">
-            <h3>
-              Passo 8: Pro LED verde, o ritmo é na porta digital 8. E se o buzzer tá na vibe, liga ele com um fio na porta digital 6, beleza?
-            </h3>
-          </div>
-          
-          <div class="step">
-            <h3>
-              Passo 9: Lembra do botão? Liga um fio numa das perninhas dele, entre a resistência, e manda o flow até a porta digital 5.
-            </h3>
-          </div>
-          
-          <div class="step">
-            <h3>
-              Passo 10: Pula pra pista do LED vermelho dos peões! Liga um fio no positivo dele e conecta na porta digital 3, pra deixar tudo sincronizado.
-            </h3>
-          </div>
-          
-          <div class="step">
-            <h3>Passo 11: E chegamos no último passo, amiga! Pro LED verde dos peões, pega um fiozinho da perninha positiva e manda ver na porta digital 2.</h3>
+            <h3>Passo 2 - conectando resistores e LEDs</h3>
+            <img src="./images/tinker/tinker1.JPG" alt="Passo 2 - conectando resistores e LEDs ">
           </div>
 
           <div class="step">
-            <h3>E aí está, nosso semáforo estilo Kpop pronto pra brilhar no palco das tecnologias! 💃🕺 Agora é só mandar o sinal pro Arduino e curtir essa dança de luzes! 🎶🌈 Se joga! 🚦💖</h3>
-            <img src="./images/stf.jpg" alt="imagem">
+            <h3>Passo 3 - conectando BUZZER e BOTÃO</h3>
+            <img src="./images/tinker/tinker2.JPG" alt="Passo 3 - conectando alguns cabos jumpers">
+          </div>
+
+          <div class="step">
+            <h3>Passo 4 - conectando jumpers entre os resistores e os cátodos dos LEDs</h3>
+            <img src="./images/tinker/tinker3.JPG" alt="Passo 4 - conectando jumpers entre os resistores e os cátodos dos LEDs">
+          </div>
+
+          <div class="step">
+            <h3>Passo 5 - conectando MAIS alguns cabos jumpers</h3>
+            <img src="./images/tinker/tinker4.JPG" alt="Passo 5 - conectando alguns MAISS cabos jumpers">
+          </div>
+
+          <div class="step">
+            <h3>Saiu do forno!</h3>
+            <img src="./images/stf.jpg" alt="Foto do circuito completo">
           </div>
           
-
-          <p>Kpoper out.</p>
+          
         </section>
 
         <hr class="rounded">
@@ -233,107 +213,125 @@
 
           <pre class="code-block">
             <code class="code-indent" id="cPlusPlusCode">
- 
-              long ciclo = 10 * 1000l; 
-              long ultimo_ciclo = 0;
-
-              int debounce_delay = 800;
-              int pedido_peao = 0;
-              int pedido_estado = 0;
-
-              const byte PEAO_GREEN = 2;
-              const byte PEAO_RED = 3;
-              const byte BUTTON = 5;
-              const byte BELL = 6;
-              const byte CAR_GREEN = 8;
-              const byte CAR_YELLOW = 9;
-              const byte CAR_RED = 10;
-
-              const byte NOTE_A6 = 1860;  // experimentem mudar para sons diferentes :)
-
-              void setup(){
-                pinMode(PEAO_GREEN, OUTPUT);
-                digitalWrite(PEAO_GREEN, LOW);
-                pinMode(PEAO_RED, OUTPUT);
-                digitalWrite(PEAO_RED, HIGH);
-
-                pinMode(CAR_GREEN, OUTPUT);
-                digitalWrite(CAR_GREEN, HIGH);
-                pinMode(CAR_YELLOW, OUTPUT);
-                digitalWrite(CAR_YELLOW, LOW);
-                pinMode(CAR_RED, OUTPUT);
-                digitalWrite(CAR_RED, LOW);
-
-                pinMode(BUTTON, INPUT);
-                ultimo_ciclo = millis();
-                Serial.begin(9600);
-              }
-              void loop(){
-                long ms = millis();
-                byte pedido = digitalRead(BUTTON);
-
-                if( ultimo_ciclo + ciclo < ms ){
-                  Serial.print("Prioridade aos peoes (automatico)\n");
-                  pararCarros();
-                  peoes();
-                  arrancarCarros();
-                  pedido_estado = 1;
-                  ultimo_ciclo = millis();
-                } else if( pedido == 1 && (ms - debounce_delay) > pedido_peao ){
-                  Serial.print("Prioridade aos peoes (manual)\n");
-                  pararCarros();
-                  peoes();
-                  arrancarCarros();
-                  pedido_estado = 1;
-                  ultimo_ciclo = millis(); // repor o contador automatico para nao acionar logo de seguida
-                } else if( pedido != pedido_estado ){
-                  pedido_peao = ms;
-                }
-
-                pedido_estado = pedido;
-              }
-
-              void pararCarros(){
-                delay(1000);
-                digitalWrite(CAR_GREEN, LOW);
-                digitalWrite(CAR_YELLOW, HIGH);
-
-                delay(1000);
-                digitalWrite(CAR_YELLOW, LOW);
-                digitalWrite(CAR_RED, HIGH);
-
-                delay(1500);
-              }
-
-              void arrancarCarros(){
-                digitalWrite(CAR_RED, LOW);
-                digitalWrite(CAR_YELLOW, LOW);
-                digitalWrite(CAR_GREEN, HIGH);
-              }
-
-              void peoes(){
-                digitalWrite(PEAO_RED, LOW);
-                digitalWrite(PEAO_GREEN, HIGH);
-
-                delay(5000);
-                piscaLuz(PEAO_GREEN, 5, 400);
-                digitalWrite(PEAO_GREEN, LOW);
-                digitalWrite(PEAO_RED, HIGH);
-                delay(2000);
-              }
-
-              void piscaLuz(byte luz, byte vezes, int tempo){
-                for( byte i = 0; i < vezes; i++ ){
-                  digitalWrite(luz, LOW);
-                  tone(BELL, NOTE_A6, 1000/2);
-                  delay(tempo);
-                  digitalWrite(luz, HIGH);
-                  delay(tempo);
-                  noTone(BELL);
-                }
-              }
+    // Variáveis para controlar o ciclo de troca automática
+    long ciclo = 1 * 1000l; // 10 segundos
+    long ultimo_ciclo = 0;
+    
+    // Variáveis para controlar o botão
+    int debounce_delay = 800;
+    int request_person = 0;
+    int pedido_estado = 0;
+    
+    // Arduino's digital input (Portas digitais do arduino)
+    const byte PERSON_GREEN = 2;
+    const byte PERSON_RED = 3;
+    const byte BUTTON = 5;
+    const byte BELL = 6;
+    const byte CAR_GREEN = 8;
+    const byte CAR_YELLOW = 9;
+    const byte CAR_RED = 10;
+    
+    // som de aviso para peões/pedestres
+    const byte NOTE_A6 = 2000;  // experimentem mudar para sons diferentes
+    
+    void setup(){
+      // semafaro pedestres
+      pinMode(PERSON_GREEN, OUTPUT);
+      digitalWrite(PERSON_GREEN, LOW);
+      pinMode(PERSON_RED, OUTPUT);
+      digitalWrite(PERSON_RED, HIGH);
+    
+      // semaforo transito
+      pinMode(CAR_GREEN, OUTPUT);
+      digitalWrite(CAR_GREEN, HIGH);
+      pinMode(CAR_YELLOW, OUTPUT);
+      digitalWrite(CAR_YELLOW, LOW);
+      pinMode(CAR_RED, OUTPUT);
+      digitalWrite(CAR_RED, LOW);
+    
+      // botao person
+      pinMode(BUTTON, INPUT);
+    
+      // definir o ultimo ciclo
+      ultimo_ciclo = millis();
+    
+      Serial.begin(9600);
+    }
+    
+    void loop(){
+      // detetar botao pressionado, com proteção debounce
+      // http://arduino.cc/it/Tutorial/Debounce
+      long ms = millis();
+      byte request = digitalRead(BUTTON);
+    
+      if( ultimo_ciclo + ciclo < ms ){
+        // esta na hora de trocar para peoes (ciclo automático)
+        Serial.print("Prioridade aos peoes (auto)\n");
+        stopCars();
+        person();
+        greenLightCars();
+        pedido_estado = 1;
+        ultimo_ciclo = millis();
+      } else if( request == 1){
+        // um pedestre pediu para parar o trânsito
+        Serial.print("Prioridade aos peoes (manual)\n");
+        stopCars();
+        person();
+        greenLightCars();
+        pedido_estado = 1;
+        ultimo_ciclo = millis(); // repor o contador automatico para nao acionar logo de seguida
+      } else if( request != pedido_estado ){
+        request_person = ms;
+      }
+    
+      pedido_estado = request;
+      
+      //A cada 60 segundos, irá aparaecer um "Hello, world!" no serial monitor. 
+      Serial.print("Hello, world!\n"); 
+      delay(60000);
+    }
+    
+    void stopCars(){
+      delay(1000);
+      digitalWrite(CAR_GREEN, LOW);
+      digitalWrite(CAR_YELLOW, HIGH);
+    
+      delay(1000);
+      digitalWrite(CAR_YELLOW, LOW);
+      digitalWrite(CAR_RED, HIGH);
+    
+      delay(1500);
+    }
+    
+    void greenLightCars(){
+      digitalWrite(CAR_RED, LOW);
+      digitalWrite(CAR_YELLOW, LOW);
+      digitalWrite(CAR_GREEN, HIGH);
+    }
+    
+    void person(){
+      digitalWrite(PERSON_RED, LOW);
+      digitalWrite(PERSON_GREEN, HIGH);
+    
+      delay(5000);
+      piscaLuz(PERSON_GREEN, 5, 400);
+      digitalWrite(PERSON_GREEN, LOW);
+      digitalWrite(PERSON_RED, HIGH);
+      delay(2000);
+    }
+    
+    void piscaLuz(byte luz, byte vezes, int tempo){
+      for( byte i = 0; i < vezes; i++ ){
+        digitalWrite(luz, LOW);
+        tone(BELL, NOTE_A6, 1000/2);
+        delay(tempo);
+        digitalWrite(luz, HIGH);
+        delay(tempo);
+        noTone(BELL);
+      }
+    }
             </code>
-            <button onclick="copyClip()">Copiar códigos!</button>
+    <button onclick="copyClip()">Copiar códigos!</button>
           </pre>
         </section>
 

@@ -142,11 +142,32 @@ main section.content p {
   font-size: 1.2rem;
 }
 
+main section.content.about-us .look-down {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.3rem;
+  background-color: #25d3d3;
+  padding: .25rem;
+}
+
+main section.content.about-us p, ol, ul {
+  width: 85%;
+}
+
 main section.content.about-us p {
   text-indent: 3ch;
   margin: 0 auto 0.5rem auto;
   text-align: start;
-  width: 85%;
+}
+
+main section.content.about-us ul, ol {
+  font-size: 1.2rem;
+  margin: 0 auto 0.5rem auto;
+  text-align: start;  
+}
+
+main section.content.about-us li {
+  margin-bottom: .4rem;
 }
 
 main section.content.about-us {
@@ -158,7 +179,7 @@ main section.content.about-us .image-circuit {
   border-radius: 0.5rem;
   border: var(--cyan) solid 1rem;
   margin: 1rem;
-  width: 65%;
+  width: 55%;
 }
 
 main div.parts {
@@ -230,11 +251,10 @@ main section.content.mounting img {
   border-radius: .5rem;
   border: .75rem solid var(--cyan);
   transition: .25s;
-  width: 85%;
+  width: 75%;
 }
 
-main section.content.mounting img:hover, 
-main section.content.code .image-container img:hover {
+main section.content.mounting img:hover {
   scale: 1.15;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 }
