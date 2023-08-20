@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../images/others/tekinst-favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../reset.css">
-    <link rel="stylesheet" href="./timer.css">
+    <link rel="stylesheet" href="../robotics-style.css">
     <title>Timer - Montagem comentada</title>
   </head>
   <body>
@@ -42,10 +42,40 @@
     <main>
         <section class="content about-us" id="about-us">
             <h2>Sobre o projeto</h2>
-              <img class="image-cep" src="./content/work/timer.jpg" alt="Timer">         
+              <img class="image-circuit" src="./content/work/timer.gif" alt="Timer">         
+              <h3>Sobre timer e a contagem do tempo</h3>
               <p>
-                O projeto escolar "Circuito Timer" foi desenvolvido pelos alunos Eduardo de Oliveira, Eduardo Antonio, Arthur Zuliani, Carlos Eduardo e Giorgio Riboldi da disciplina de Robótica com o objetivo de reforçar os conceitos básicos da eletrônica, aprimorar habilidades na montagem de circuitos e criar um simples sistema funcional que envolvesse a interação entre um circuito de Arduino e um timer. Os timers são ferramentas extremamente úteis e versáteis. Eles nos permitem controlar o tempo de forma precisa e eficiente, seja para cronometrar tarefas, estabelecer limites ou simplesmente lembrar-nos de algo importante.
+                O controle preciso do tempo é uma necessidade constante em uma ampla gama de aplicações, desde automação industrial até dispositivos de consumo cotidiano. O projeto do circuito temporizador com timer integrado oferece uma solução confiável para medir e gerenciar intervalos de tempo de maneira eficaz. Ao explorar suas funcionalidades avançadas e versatilidade, podemos abrir portas para inúmeras aplicações em campos tão diversos quanto ciência, tecnologia e até mesmo projetos de arte interativa. No decorrer desse site, você verá a montagem de um circuito timer com arduino.
               </p>
+  
+              <h3>Funcionalidades do Circuito Timer</h3>
+              <p>
+                O circuito com timer integrado é uma solução eletrônica projetada para medir e controlar intervalos de tempo com precisão. Esse circuito permite configurar intervalos de tempo específicos com a finalidade, geralmente, de gerir o tempo. E, o mais importante na minha visão, esse circuito timer pode evolui para ser uma ferramenta indispensável em projetos eletrônicos dos mais diversos tipos, a criatividade huamana não tem limites.
+              </p>
+  
+              <h3>Algumas Aplicações:</h3>
+              <ol>
+                <li><strong>Controle de Dispositivos:</strong> O circuito pode ser utilizado para temporizar o funcionamento de dispositivos elétricos, como acionar uma bomba de água em intervalos regulares.
+                </li>
+                <li><strong>Sistemas de Iluminação:</strong> Pode ser usado para criar efeitos de iluminação sequenciais em ambientes, palcos e exposições.</li>
+                <li><strong>Automatização Industrial:</strong> Em processos de produção, pode ser aplicado para sincronizar etapas ou acionar máquinas em intervalos específicos.</li>
+                <li><strong>Projetos de Prototipagem:</strong> Ideal para testar temporizações em protótipos antes de implementações finais.</li>
+                <li><strong>Projeto de Arte Interativa:</strong> Pode ser incorporado em instalações de arte que envolvem elementos temporais, como mudanças de luz, movimento e som.</li>
+                <li><strong>"Controle" do tempo:</strong> Pode ser usado como uma ferramenta que auxilia no controle de tempo gasto em certas atividades.</li>
+              </ol>
+  
+              <h3>Participantes do Projeto:</h3>
+              <p>Este projeto sobre o circuito timer teve a participação de 5 alunos. São eles:</p>
+  
+              <ul>
+                <li>Ed. Oliveira 18</li>
+                <li>Arthur Zuliani 10</li>
+                <li>Giorgio Riboldi 22</li>
+                <li>Ed. Antonio</li>
+                <li>Carlos Eduardo 39</li>
+              </ul>
+  
+              <p class="look-down">Logo abaixo, você verá a nossa montagem de um circuito que envolve esse componente.</p>
         </section>
 
         <hr class="rounded">
@@ -97,18 +127,40 @@
 
         <hr class="rounded">
 
-        <section class="content mounting">
+        <section class="content mounting">        
           <h2>Montagem por passos</h2>
-          <h3>Aqui estão os passos para a montagem dessa budega:</h3>
 
-          <p>Passo 1: Ligue dois jumpers macho-fêmea (ou combine dois jumpers macho-macho com dois jumpers fêmea-fêmea) aos pinos GND e 5V da placa Arduino.</p>
+          <div class="step">
+            <h3>Primeiramente, vamos organizar os materiais: </h3>
+              <ul>
+                <li>Um Arduino</li>
+                <li>4 cabos jumper macho-fêmea</li>
+                <li>1 timer</li>
+                <li>Computador no talo, com o Arduino IDE aberto</li>
+              </ul>
+          </div>
 
-          <p>Passo 2: Conecte os jumpers macho-fêmea nos pinos GND e VCC do display 7 segmentos, respectivamente.</p>
-
-          <p>Passo 3: Utilizando mais dois jumpers macho-fêmea, conecte o pino CLK do módulo display à porta analógica A4 do Arduino.</p>
-
-          <p>Passo 4: Conecte o pino DIO do módulo display à porta analógica A5 do Arduino.</p>
+          <div class="step">
+            <h3>Passo 1 - Conectar um jumper wire no ground até a porta negativa do display 7 segmentos (timer)</h3>
+            <img src="./content/tinker/Tinker0.JPG" alt="Passo 1 - Conectar um jumper wire no ground até a porta negativa do display 7 segmentos (timer)">
+          </div>
+          <div class="step">
+            <h3>Passo 2 - Conectar um jumper wire no 5v do arduino até a porta positiva do display 7 segmentos</h3>
+            <img src="./content/tinker/Tinker1.JPG" alt="Passo 2 - Conectar um jumper wire no 5v do arduino até a porta positiva do display 7 segmentos">
+          </div>
+          <div class="step">
+            <h3>Passo 3 - Conectar um jumper wire na porta analógica 4 (A4) até a porta "D" do display 7 segmentos</h3>
+            <img src="./content/tinker/Tinker2.JPG" alt="Passo 3 - Conectar um jumper wire na porta analógica 4 (A4) até a porta 'D' do display 7 segmentos">
+          </div>
+          <div class="step">
+            <h3>Passo 4 - Conectar um jumper wire na porta analógica 5 (A5) até a porta 'C' do display 7 segmentos</h3>
+            <img src="./content/tinker/Tinker3.JPG" alt="Passo 4 - Conectar um jumper wire na porta analógica 5 (A5) até a porta 'C' do display 7 segmentos">
+          </div>
           
+          <div class="step">
+            <h3>CABUUMMM! (Será isso um motivo para me cancelarem?)</h3>
+            <img src="./content/work/timer.jpg" alt="Fotografia do circuito timer">
+          </div>
         </section>
 
         <hr class="rounded">
@@ -123,46 +175,36 @@
 
           <pre class="code-block">
             <code class="code-indent" id="cPlusPlusCode">
-              #include &lt;TM1637Display.h&gt;
-                /* Definições dos pinos utilizados. O módulo */
-                /* aceita pinos analógicos e/ou digitais. */
-                #define CLK A4
-                #define DIO A5
-                /* Cria o objeto de controle para o display */
-                /* definindo os pinos utilizados do Arduino. */
-                TM1637Display display(CLK, DIO);
-                
-                /* Configurações do programa */
-                
-                void setup() {
-                /* Define o brilho do display (0 a 15) */
-                display.setBrightness(15);
-                }
-                /* Looping infinito */
-                void loop() {
-                /* Loop para a contagem de 0 a 9999 */
-                for (int i = 0; i <= 9999; i++) {
-                /* Mostra o número atual armazenado na */
-                /* variável (false: sem zeros a esquerda */
-                /* ou true: com zeros a esquerda). */
-                display.showNumberDec(i, false);
-                /* Aguarda 1 segundo para o próximo dígito*/
-                delay(1);
-                }/* Fim do looping da contagem */
-                }/* Fim do looping infinito */
+    #include &lt;TM1637Display.h&gt;
+      /* Definições dos pinos utilizados. O módulo */
+      /* aceita pinos analógicos e/ou digitais. */
+      #define CLK A4
+      #define DIO A5
+      /* Cria o objeto de controle para o display */
+      /* definindo os pinos utilizados do Arduino. */
+      TM1637Display display(CLK, DIO);
+      
+      /* Configurações do programa */
+      
+      void setup() {
+      /* Define o brilho do display (0 a 15) */
+      display.setBrightness(15);
+      }
+      /* Looping infinito */
+      void loop() {
+      /* Loop para a contagem de 0 a 9999 */
+      for (int i = 0; i <= 9999; i++) {
+      /* Mostra o número atual armazenado na */
+      /* variável (false: sem zeros a esquerda */
+      /* ou true: com zeros a esquerda). */
+      display.showNumberDec(i, false);
+      /* Aguarda 1 segundo para o próximo dígito*/
+      delay(1);
+      }/* Fim do looping da contagem */
+      }/* Fim do looping infinito */
             </code>
-            <button onclick="copyClip()">Copiar códigos!</button>
+      <button onclick="copyClip()">Copiar códigos!</button>
           </pre>
-        </section>
-
-        <hr class="rounded">
-
-        <section class="content res">
-          <h2>Resultado Final</h2>
-          <video  class="video" width="800" height="600" controls>
-            <source src="./content/work/timer.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video> 
         </section>
 
         <hr class="rounded">
