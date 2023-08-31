@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap");
+
+:root {
+  --yellow: #ffea00;
+  --cyan: #0fd3da;
+  --black: #06274b;
+  --blue-gray: #6d7f8e;
+  --white: #f0f0f0;
+  --gray: #5b5b5b;
+  --white-background-variation: #d4d4d4;
+  --transparent: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: var(--gray);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem 8rem 2rem;
+  background-color: var(--black);
+  color: var(--cyan);
+}
+
+header .titles {
+  align-items: center;
+}
+
+header .titles h1 {
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+header .titles h2 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+
+div.nav {
+  display: flex;
+  align-items: center;
+}
+
+header .nav .material-symbols-rounded {
+  background-color: var(--yellow);
+  color: var(--black);
+  font-size: 1.5rem;
+  transition: .25s;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+header .nav .material-symbols-rounded:hover {
+  scale: 1.15;
+}
+
+header .nav .links {
+  display: none;
+}
+
+header .nav .links .c-links{
+  display: flex;
+  list-style: none;
+  padding: .5rem;
+  font-size: 1.3rem;
+  transition: .5s;
+}
+
+header .nav .links .c-links:hover{
+  font-size: 1.5rem;
+  border-bottom: .25rem solid var(--yellow);
+  border-left: .25rem solid var(--yellow);
+}
+
+header .nav .links .link {
+  text-decoration: none;
+  color: var(--yellow);
+}
+
+header .nav .links .submenu {
+  display: none;
+  height: 9rem;
+  width: 9rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: var(--cyan) var(--black);
+  scrollbar-width: thin;
+  position: absolute;
+  margin-top: 2rem;
+}
+
+header .nav .links .submenu li a {
+  text-decoration: none;
+  color: var(--yellow);
+}
+
+header .nav .links .submenu li {
+  list-style: none;
+  transition: 0.25s;
+  padding: 0.5rem;
+  margin-left: -2rem;
+  background-color: var(--black);
+}
+
+header .nav .links .submenu li:hover{
+  scale: 1.08;
+  background-color: var(--cyan);
+}
+
+header .nav .links .c-links:hover .submenu {
+  display: inline-block;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    margin-top: -4rem;
+}
+
+hr.rounded {
+  border-top: .5rem solid var(--black);
+  margin: 0;
+}
+
+main section.content {
+  background-color: var(--white-background-variation);
+  padding: 1.5rem 2rem 1.5rem 2rem;
+}
+
+main section.content h2 {
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+main section.content h3 {
+  font-size: 1.5rem;
+}
+
+main section.content p {
+  font-size: 1.15rem;
+  margin: auto;
+  width: 80%;
+}
+
+main section.content.about {
+  text-align: center;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+
+main section.content.about .image {
+ border-radius: .5rem;
+ margin: 1.5rem 0;
+ width: 90%;
+}
+
+main section.opinion-article {
+  text-align: center;
+}
+
+main section.content.pictures {
+  text-align: center;
+}
+
+main section.content.pictures .screenshot {
+  border-radius: .5rem;
+  margin: 1.5rem 0;
+  width: 95%;
+  transition: .4s;
+}
+
+main section.content.pictures .screenshot:hover {
+  border: var(--cyan) solid .5rem;
+  width: 98%;
+}
+
+main section.content .text p {
+  text-indent: 3ch;
+  margin: 0 auto .5rem auto;
+  text-align: start;
+  width: 85%;
+}
+
+main section.content.projects .project {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 2.5rem auto 2.5rem auto;
+  width: 75%;
+}
+
+main section.content.projects .project .description a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main section.content.projects .project .description p{
+  font-size: 1.25rem;
+}
+
+main section.content.projects .project .description {
+  padding: 1rem;
+  transition: .25s;
+  border-radius: 0 .5rem .5rem 0;
+}
+
+main section.content.projects .project .project-image{
+  background-color: var(--black);
+  padding: .75rem;
+  border-radius: .5rem 0 0 .5rem;   
+}
+
+main section.content.projects .project .project-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+main section.content.projects .project:hover .description {
+  background-color: var(--black);
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(45deg, var(--cyan), var(--yellow));
+  font-size: 1.4rem;
+  padding: .25rem;
+}
+
+footer .cep a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  transition: .25s;
+}
+
+footer .cep img {
+  width: 5rem;
+  padding: .5rem;
+  margin-left: 2rem;
+}
+
+footer .info {
+  display: flex;
+  align-items: center;
+}
+
+footer .cep a:hover {
+  scale: 1.04;
+}
+
+.message-form {
+  background-color: var(--white-background-variation);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: .5rem;
+  text-align: left;
+  display: flex;
+  flex-flow: column wrap;
+
+}
+
+.message-form label {
+  margin-bottom: 1rem;
+}
+
+.message-form label input {
+  border-radius: .5rem;
+  font-size: 1.25rem;
+  border: 0
+}
+
+.message-form label textarea {
+  border-radius: .5rem;
+  font-size: 1.25rem;
+  height: 10rem;
+  border: 0
+}
+
+.message-form button {
+  border-radius: .5rem;
+  padding: 1rem;
+  border: 0;
+  background-color:  var(--white);
+  transition: .25s;
+}
+
+.message-form button:hover {
+  background-color:  var(--black);
+  color: var(--yellow);
+  scale: 1.05;
+}
+
+@media only screen and (max-width: 600px)  {
+  header  {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  header .titles h1 {
+    font-size: 2.5rem;
+  }
+  
+  header .titles h2 {
+    font-size: 1.25rem;
+  }
+
+  header .nav .material-symbols-rounded {
+    margin: 1rem 0;
+  }
+
+  header .nav .links .c-links {
+    font-size: 1.1rem;
+  }
+
+  header .nav .links .c-links:hover {
+    font-size: 1.2rem;
+  }
+
+  main {
+    width: 95%
+  }
+
+  main section.content {
+    background-color: var(--white-background-variation);
+    padding: .5rem;
+  }
+
+  main section.content h2 {
+    font-size: 1.25rem;
+  }
+
+  main section.content p {
+    font-size: .9rem;
+  }
+
+  main section.content.about-ais .chatgpt-image, main section.opinion-article img {
+    margin: 1rem 0;
+    width: 85%;
+   }
+   
+  main section.content.projects .project .description {
+    border-radius: 0 0 .5rem .5rem;
+  }
+  
+  main section.content.projects .project .project-image{
+  border-radius: .5rem .5rem 0 0;
+  }
+
+  main section.content.projects .project {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem auto .5rem auto;
+    width: 75%;
+  }
+
+  footer {
+    display: inline-block;
+    width: 100%;
+    text-align: center;    
+    font-size: 1.2rem;
+  }
+
+  footer .info {
+    margin-left: 1rem;
+  }
+
+  footer .cep img {
+    width: 2.5rem;
+  }
+}
