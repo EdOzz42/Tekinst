@@ -596,6 +596,12 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
 }
 
 .custom-btn.btn-12 {
-  background-color: var(--white-background);
+  background-color: transparent;
 }
 
+.special {
+  padding: 1rem;
+  color: white;
+  background-color: var(--dark-blue);
+  border-radius: .5rem;
+}
